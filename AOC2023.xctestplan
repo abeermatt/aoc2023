@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "CCA185EF-531E-4BF4-80B5-85B6E504FDE5",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AOC2023.xcodeproj",
+      "identifier" : "AFFC6DF42B17817300C04F8D",
+      "name" : "AOC2023"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AOC2023.xcodeproj",
+        "identifier" : "AF60ED652B188F38001DC88B",
+        "name" : "AOC2023Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
