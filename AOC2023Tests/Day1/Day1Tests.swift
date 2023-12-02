@@ -56,22 +56,12 @@ zoneight234
         XCTAssertEqual(71, Day1.Part2.extractCalibrationValue(from: "76six4blfmlclrcj4one"))
         XCTAssertEqual(73, Day1.Part2.extractCalibrationValue(from: "76six4blfmlclrcj4onethree"))
         XCTAssertEqual(71, Day1.Part2.extractCalibrationValue(from: "76six4blfmlclrcj4twone"))
-        XCTAssertEqual(1, Day1.Part2.extractCalibrationValue(from: "oneight"))
+        XCTAssertEqual(18, Day1.Part2.extractCalibrationValue(from: "oneight"))
         XCTAssertEqual(28, Day1.Part2.extractCalibrationValue(from: "twoneight"))
         XCTAssertEqual(1, Day1.Part2.extractCalibrationValue(from: "1"))
         XCTAssertEqual(1, Day1.Part2.extractCalibrationValue(from: "one"))
     }
-    
-    func testReplaceLastWordWithNumbers() throws {
-//        XCTAssertEqual("sevenflknr33qtwo6stmsblmrzczdqflxg", Day1.Part2.replaceLastWordWithNumbers(forInput:  "sevenflknr33qtwosixstmsblmrzczdqflxg"))
-//        XCTAssertEqual("81four2", Day1.Part2.replaceLastWordWithNumbers(forInput:  "81fourtwo"))
-//        XCTAssertEqual("36gqfcml3zfxhfsvr", Day1.Part2.replaceLastWordWithNumbers(forInput:  "three6gqfcml3zfxhfsvr"))
-//        XCTAssertEqual("76six4blfmlclrcj41", Day1.Part2.replaceLastWordWithNumbers(forInput:  "76six4blfmlclrcj4one"))
-//        XCTAssertEqual("xrsrhbjthreetgsix14bbrvkcdj", Day1.Part2.replaceLastWordWithNumbers(forInput:  "xrsrhbjthreetgsix1fourbbrvkcdj"))
-        XCTAssertEqual("76six4blfmlclrcj4tw1", Day1.Part2.replaceLastWordWithNumbers(forInput:  "76six4blfmlclrcj4twone"))
-
-    }
-    
+        
 }
 
 
