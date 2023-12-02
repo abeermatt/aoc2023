@@ -36,13 +36,12 @@ zoneight234
     func testPart2() throws {
         
         let input = try TestHelpers.readFile(named: "Day1Part2")
-        print(Day1.Part2.run(input))
-//        XCTAssertEqual(142, Day1.Part2.run(input))
+        XCTAssertEqual(54770, Day1.Part2.run(input))
 
     }
     
     func testExtractCalibrationValue() throws {
-        XCTAssertEqual(8, Day1.Part2.extractCalibrationValue(from: "lvgxbch8nnnlpbvtgpqqmmm"))
+        XCTAssertEqual(88, Day1.Part2.extractCalibrationValue(from: "lvgxbch8nnnlpbvtgpqqmmm"))
 
         XCTAssertEqual(29, Day1.Part2.extractCalibrationValue(from: "two1nine"))
         XCTAssertEqual(83, Day1.Part2.extractCalibrationValue(from: "eightwothree"))
@@ -58,8 +57,8 @@ zoneight234
         XCTAssertEqual(71, Day1.Part2.extractCalibrationValue(from: "76six4blfmlclrcj4twone"))
         XCTAssertEqual(18, Day1.Part2.extractCalibrationValue(from: "oneight"))
         XCTAssertEqual(28, Day1.Part2.extractCalibrationValue(from: "twoneight"))
-        XCTAssertEqual(1, Day1.Part2.extractCalibrationValue(from: "1"))
-        XCTAssertEqual(1, Day1.Part2.extractCalibrationValue(from: "one"))
+        XCTAssertEqual(11, Day1.Part2.extractCalibrationValue(from: "1"))
+        XCTAssertEqual(11, Day1.Part2.extractCalibrationValue(from: "one"))
     }
         
 }

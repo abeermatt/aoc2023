@@ -59,42 +59,30 @@ struct Day1 {
             ]
         }
         
-        static func firstMatch(input: any StringProtocol) -> (any StringProtocol, String) {
-            
+        static func firstMatch(input: any StringProtocol) -> String {
             if let entry = mappings.first(where: {
                 input.hasPrefix($0.key)
             }) {
-                let length = entry.key.lengthOfBytes(using: .utf8)
-                let index = input.index(input.startIndex, offsetBy: length, limitedBy: input.endIndex)!
-                return (input[index...], entry.value)
+                return entry.value
             }
             let index = input.index(after: input.startIndex)
             return firstMatch(input: input[index...])
         }
 
-        static func lastMatch(input: any StringProtocol) -> (any StringProtocol, String) {
-            if input.isEmpty {
-                return (input, "")
-            }
-            
+        static func lastMatch(input: any StringProtocol) -> String {
             if let entry = mappings.first(where: {
                 input.hasSuffix($0.key)
             }) {
-                let length = entry.key.lengthOfBytes(using: .utf8)
-                let index = input.index(input.endIndex, offsetBy: Int(-length), limitedBy: input.startIndex)!
-                return (input[..<index], entry.value)
+                return entry.value
             }
             let index = input.index(before: input.endIndex)
             return lastMatch(input: input[..<index])
         }
 
         static func extractCalibrationValue(from input: String) -> Int {
-            print("input: \(input)")
             let first = firstMatch(input: input)
-            print("first \(first)")
-            let last = lastMatch(input: first.0)
-            print("last \(last)")
-            return Int("\(first.1)\(last.1)")!
+            let last = lastMatch(input: input)
+            return Int("\(first)\(last)")!
         }
         
     
