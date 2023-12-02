@@ -1,0 +1,30 @@
+//
+//  Game.swift
+//  AOC2023
+//
+//  Created by Matthew Hobbs on 02/12/2023.
+//
+
+import Foundation
+
+extension Day2.Part1 {
+    
+    struct Game {
+        
+        let id: Int
+        let records: [Day2.Part1.Record]
+
+        func isPossible(red: Int, blue: Int, green: Int) -> Bool {
+            return records.allSatisfy({ record in record.isPossible(red: red, blue: blue, green: green)})
+        }
+
+        
+        static func fromLine(_ line: String) -> Self {
+            let parts = line.components(separatedBy: ": ")
+            let game = parts[0].replacingOccurrences(of: "Game ", with: "")
+            let sets = parts[1].components(separatedBy: "; ")
+            return Game(id: Int(game)!, records: sets.map(Day2.Part1.Record.fromSet))
+        }
+    }
+
+}
