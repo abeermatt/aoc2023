@@ -14,7 +14,7 @@ final class Day1Tests: XCTestCase {
 
     }
     func testPart1() throws  {
-        let input = try TestHelpers.readFile(named: "Day1Part1")
+        let input = try TestHelpers.readFile(named: "Day1Input")
         let value = Day1.Part1.run(input)
         XCTAssertEqual(54630, value)
     }
@@ -35,7 +35,7 @@ zoneight234
     
     func testPart2() throws {
         
-        let input = try TestHelpers.readFile(named: "Day1Part2")
+        let input = try TestHelpers.readFile(named: "Day1Input")
         XCTAssertEqual(54770, Day1.Part2.run(input))
 
     }
