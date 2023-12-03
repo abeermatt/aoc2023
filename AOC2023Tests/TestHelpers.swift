@@ -12,10 +12,7 @@ class TestHelpers {
         let testBundle = Bundle(for: Self.self)
         let fileUrl = testBundle.url(forResource: name, withExtension: "txt")!
         let contents = try Data(contentsOf: fileUrl)
-        print(fileUrl)
         return String(data: contents, encoding: .utf8)!
-
-//        let fileUrl = URL(fileURLWithPath: FileManager.default.currentDirectoryPath.appending(name))
     }
 
 

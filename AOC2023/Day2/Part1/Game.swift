@@ -17,7 +17,15 @@ extension Day2.Part1 {
         func isPossible(red: Int, blue: Int, green: Int) -> Bool {
             return records.allSatisfy({ record in record.isPossible(red: red, blue: blue, green: green)})
         }
-
+        
+        var fewestNumber: Day2.Part1.Record {
+            return records.reduce(.zero) { acc, next in
+                return Day2.Part1.Record(
+                    red: max(acc.red, next.red),
+                    blue: max(acc.blue, next.blue),
+                    green: max(acc.green, next.green))
+            }
+        }
         
         static func fromLine(_ line: String) -> Self {
             let parts = line.components(separatedBy: ": ")

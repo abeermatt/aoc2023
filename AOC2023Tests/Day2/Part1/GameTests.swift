@@ -39,6 +39,23 @@ final class GameTests: XCTestCase {
         
     }
 
+    func testFewestNumber() throws {
+        let game1 = Day2.Part1.Game.fromLine("Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")
+        XCTAssertEqual(Day2.Part1.Record(red: 4, blue: 6, green: 2), game1.fewestNumber)
+
+        let game2 = Day2.Part1.Game.fromLine("Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue")
+        XCTAssertEqual(Day2.Part1.Record(red: 1, blue: 4, green: 3), game2.fewestNumber)
+
+        let game3 = Day2.Part1.Game.fromLine("Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red")
+        XCTAssertEqual(Day2.Part1.Record(red: 20, blue: 6, green: 13), game3.fewestNumber)
+
+        let game4 = Day2.Part1.Game.fromLine("Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red")
+        XCTAssertEqual(Day2.Part1.Record(red: 14, blue: 15, green: 3), game4.fewestNumber)
+
+        let game5 = Day2.Part1.Game.fromLine("Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green")
+        XCTAssertEqual(Day2.Part1.Record(red: 6, blue: 2, green: 3), game5.fewestNumber)
+
+    }
 
 
 

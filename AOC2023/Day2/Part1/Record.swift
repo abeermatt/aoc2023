@@ -10,6 +10,9 @@ import Foundation
 extension Day2.Part1 {
 
     struct Record: Equatable {
+        
+        static var zero: Self = Record(red: 0, blue: 0, green: 0)
+        
         let red: Int
         let blue: Int
         let green: Int
@@ -18,11 +21,13 @@ extension Day2.Part1 {
             return self.red <= red && self.blue <= blue && self.green <= green
         }
         
+        var power: Int {
+            return red * blue * green
+        }
+        
         static func fromSet(_ set: String) -> Self {
             let colours = set.components(separatedBy: ", ")
                 .reduce(into: [String:Int]()) { acc, group in
-//                    3 blue
-                    print(group)
                     let parts = group.components(separatedBy: .whitespaces)
                     let count = Int(parts[0])!
                     let colour = parts[1]

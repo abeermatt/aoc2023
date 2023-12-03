@@ -31,5 +31,19 @@ struct Day2 {
 
     }
     
-    
+    struct Part2 {
+                
+        let games: [Day2.Part1.Game]
+        
+        static func sum(input: String) -> Int {
+            return input.components(separatedBy: .newlines)
+                .reject(\.isEmpty)
+                .map(Day2.Part1.Game.fromLine(_:))
+                .map(\.fewestNumber)
+                .map(\.power)
+                .sum()
+        }
+
+    }
+
 }
