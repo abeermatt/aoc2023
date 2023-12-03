@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Day2.Part1 {
+extension Day2 {
 
     struct Record: Equatable {
         

@@ -22,7 +22,7 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
     }
     
     func testPart1Full() throws {
-        let input = try TestHelpers.readFile(named: "Day2Part1")
+        let input = try TestHelpers.readFile(named: "Day2Input")
         XCTAssertEqual(2505, Day2.Part1.run(input: input, red: 12, green: 13, blue: 14))
     }
     
@@ -31,7 +31,7 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
     }
     
     func testPart2Full() throws {
-        let input = try TestHelpers.readFile(named: "Day2Part1")
+        let input = try TestHelpers.readFile(named: "Day2Input")
         XCTAssertEqual(70265, Day2.Part2.sum(input: input))
     }
 
