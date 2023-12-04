@@ -48,6 +48,13 @@
 		AFECC4162B1E33C5006034F0 /* Day3.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFECC4152B1E33C5006034F0 /* Day3.txt */; };
 		AFECC4182B1E3DC9006034F0 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4172B1E3DC9006034F0 /* Gear.swift */; };
 		AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4172B1E3DC9006034F0 /* Gear.swift */; };
+		AFECC41D2B1E5364006034F0 /* Day4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC41C2B1E5364006034F0 /* Day4Tests.swift */; };
+		AFECC41F2B1E5374006034F0 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC41E2B1E5374006034F0 /* Day4.swift */; };
+		AFECC4212B1E549E006034F0 /* ScratchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4202B1E549E006034F0 /* ScratchCard.swift */; };
+		AFECC4232B1E54F8006034F0 /* ScratchCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4222B1E54F8006034F0 /* ScratchCardTests.swift */; };
+		AFECC4242B1E551F006034F0 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC41E2B1E5374006034F0 /* Day4.swift */; };
+		AFECC4252B1E5522006034F0 /* ScratchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4202B1E549E006034F0 /* ScratchCard.swift */; };
+		AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFECC4262B1E78B9006034F0 /* Day4.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +110,11 @@
 		AFECC4122B1D31CC006034F0 /* EngineSchematicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineSchematicTests.swift; sourceTree = "<group>"; };
 		AFECC4152B1E33C5006034F0 /* Day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day3.txt; sourceTree = "<group>"; };
 		AFECC4172B1E3DC9006034F0 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
+		AFECC41C2B1E5364006034F0 /* Day4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4Tests.swift; sourceTree = "<group>"; };
+		AFECC41E2B1E5374006034F0 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		AFECC4202B1E549E006034F0 /* ScratchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCard.swift; sourceTree = "<group>"; };
+		AFECC4222B1E54F8006034F0 /* ScratchCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardTests.swift; sourceTree = "<group>"; };
+		AFECC4262B1E78B9006034F0 /* Day4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day4.txt; sourceTree = "<group>"; };
 		AFFC6DF52B17817300C04F8D /* AOC2023 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AOC2023; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +139,7 @@
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AFECC41B2B1E5356006034F0 /* Day4 */,
 				AFECC3FA2B1D1261006034F0 /* Day3 */,
 				AFECC3E12B1BA5BB006034F0 /* Day2 */,
 				AFECC3DB2B1B6DAE006034F0 /* Day1 */,
@@ -200,6 +213,25 @@
 			path = Day3;
 			sourceTree = "<group>";
 		};
+		AFECC41A2B1E5350006034F0 /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				AFECC41E2B1E5374006034F0 /* Day4.swift */,
+				AFECC4202B1E549E006034F0 /* ScratchCard.swift */,
+			);
+			path = Day4;
+			sourceTree = "<group>";
+		};
+		AFECC41B2B1E5356006034F0 /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				AFECC41C2B1E5364006034F0 /* Day4Tests.swift */,
+				AFECC4222B1E54F8006034F0 /* ScratchCardTests.swift */,
+				AFECC4262B1E78B9006034F0 /* Day4.txt */,
+			);
+			path = Day4;
+			sourceTree = "<group>";
+		};
 		AFFC6DEC2B17817300C04F8D = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +254,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AFECC41A2B1E5350006034F0 /* Day4 */,
 				AFECC3F92B1D125B006034F0 /* Day3 */,
 				AFECC3F72B1D11C9006034F0 /* main.swift */,
 				AFECC3F62B1D114A006034F0 /* Day1 */,
@@ -313,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */,
 				AFECC3DA2B1A3BF1006034F0 /* Day1Input.txt in Resources */,
 				AFECC3F52B1BB528006034F0 /* Day2Input.txt in Resources */,
 				AFECC4162B1E33C5006034F0 /* Day3.txt in Resources */,
@@ -334,13 +368,16 @@
 				AFECC4132B1D31CC006034F0 /* EngineSchematicTests.swift in Sources */,
 				AFECC4082B1D15AE006034F0 /* Symbol.swift in Sources */,
 				AFECC40A2B1D15DC006034F0 /* PartNumberTests.swift in Sources */,
+				AFECC41D2B1E5364006034F0 /* Day4Tests.swift in Sources */,
 				AF60ED6E2B188F4C001DC88B /* Array+ExtensionTests.swift in Sources */,
+				AFECC4252B1E5522006034F0 /* ScratchCard.swift in Sources */,
 				AFECC3F32B1BAC94006034F0 /* GameTests.swift in Sources */,
 				AFECC4062B1D15A9006034F0 /* EngineSchematic.swift in Sources */,
 				AFA4E9902B18A7B500126B28 /* Day1Tests.swift in Sources */,
 				AFECC3F02B1BABE4006034F0 /* Record.swift in Sources */,
 				AFECC3F12B1BABE7006034F0 /* Game.swift in Sources */,
 				AFECC3E32B1BA5CC006034F0 /* Day2Tests.swift in Sources */,
+				AFECC4232B1E54F8006034F0 /* ScratchCardTests.swift in Sources */,
 				AFECC3DD2B1B9A2F006034F0 /* String+ExtensionsTests.swift in Sources */,
 				AFECC40C2B1D180D006034F0 /* Int+ExtensionsTests.swift in Sources */,
 				AFECC3E62B1BA762006034F0 /* Day2.swift in Sources */,
@@ -349,6 +386,7 @@
 				AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */,
 				AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */,
 				AFECC4142B1D32AD006034F0 /* Schema.swift in Sources */,
+				AFECC4242B1E551F006034F0 /* Day4.swift in Sources */,
 				AFECC4072B1D15AB006034F0 /* PartNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFECC4182B1E3DC9006034F0 /* Gear.swift in Sources */,
+				AFECC41F2B1E5374006034F0 /* Day4.swift in Sources */,
 				AFECC3DF2B1B9AFE006034F0 /* String+Extensions.swift in Sources */,
 				AFECC3F82B1D11C9006034F0 /* main.swift in Sources */,
 				AFECC3E52B1BA5D5006034F0 /* Day2.swift in Sources */,
@@ -370,6 +409,7 @@
 				AFECC3FE2B1D1339006034F0 /* Day3.swift in Sources */,
 				AFECC40E2B1D18C1006034F0 /* Int+Extensions.swift in Sources */,
 				AF0928492B188C9900FC0BCF /* Array+Extensions.swift in Sources */,
+				AFECC4212B1E549E006034F0 /* ScratchCard.swift in Sources */,
 				AFECC4002B1D13D7006034F0 /* EngineSchematic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
