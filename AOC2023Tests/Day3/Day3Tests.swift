@@ -31,5 +31,14 @@ final class Day3Tests: XCTestCase {
         let input = try TestHelpers.readFile(named: "Day3")
         XCTAssertEqual(531932, Day3.Part1.sum(input))
     }
+    
+    func testPart2Sample() throws {
+        XCTAssertEqual(467835, Day3.Part2.sum(sampleInput))
+    }
+
+    func testPart2() throws {
+        let input = try TestHelpers.readFile(named: "Day3")
+        XCTAssertEqual(73646890, Day3.Part2.sum(input))
+    }
 
 }

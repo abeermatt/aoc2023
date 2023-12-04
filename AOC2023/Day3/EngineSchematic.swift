@@ -31,6 +31,20 @@ extension Day3 {
             }
         }
         
+        func gears() -> [Day3.Gear] {
+            return symbols
+                .filter(\.isGearMultiplier)
+                .compactMap { symbol in
+                    let matches = partNumbers.filter {
+                        $0.touching(symbol: symbol)
+                    }
+                    if matches.count == 2 {
+                        return Day3.Gear(left: matches[0], right: matches[1])
+                    }
+                    return nil
+                }
+        }
+        
         static func fromInput(_ input: String) -> EngineSchematic {
             let schemas: [Schema] = input
                 .components(separatedBy: .newlines)
@@ -64,7 +78,7 @@ extension Day3 {
                     if value == "." {
                         return ("", mutable)
                     }
-                    mutable.append(Schema.symbol(Symbol(x: column, y: row)))
+                    mutable.append(Schema.symbol(Symbol(x: column, y: row, value: value)))
                     return ("", mutable)
                 }
             

@@ -46,6 +46,8 @@
 		AFECC4132B1D31CC006034F0 /* EngineSchematicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4122B1D31CC006034F0 /* EngineSchematicTests.swift */; };
 		AFECC4142B1D32AD006034F0 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4102B1D30B5006034F0 /* Schema.swift */; };
 		AFECC4162B1E33C5006034F0 /* Day3.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFECC4152B1E33C5006034F0 /* Day3.txt */; };
+		AFECC4182B1E3DC9006034F0 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4172B1E3DC9006034F0 /* Gear.swift */; };
+		AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC4172B1E3DC9006034F0 /* Gear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,7 @@
 		AFECC4102B1D30B5006034F0 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		AFECC4122B1D31CC006034F0 /* EngineSchematicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineSchematicTests.swift; sourceTree = "<group>"; };
 		AFECC4152B1E33C5006034F0 /* Day3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day3.txt; sourceTree = "<group>"; };
+		AFECC4172B1E3DC9006034F0 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		AFFC6DF52B17817300C04F8D /* AOC2023 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AOC2023; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,6 +184,7 @@
 				AFECC4012B1D1427006034F0 /* PartNumber.swift */,
 				AFECC4032B1D14F2006034F0 /* Symbol.swift */,
 				AFECC4102B1D30B5006034F0 /* Schema.swift */,
+				AFECC4172B1E3DC9006034F0 /* Gear.swift */,
 			);
 			path = Day3;
 			sourceTree = "<group>";
@@ -342,6 +346,7 @@
 				AFECC3E62B1BA762006034F0 /* Day2.swift in Sources */,
 				AFECC3FC2B1D127A006034F0 /* Day3Tests.swift in Sources */,
 				AFECC40F2B1D196C006034F0 /* Int+Extensions.swift in Sources */,
+				AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */,
 				AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */,
 				AFECC4142B1D32AD006034F0 /* Schema.swift in Sources */,
 				AFECC4072B1D15AB006034F0 /* PartNumber.swift in Sources */,
@@ -352,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFECC4182B1E3DC9006034F0 /* Gear.swift in Sources */,
 				AFECC3DF2B1B9AFE006034F0 /* String+Extensions.swift in Sources */,
 				AFECC3F82B1D11C9006034F0 /* main.swift in Sources */,
 				AFECC3E52B1BA5D5006034F0 /* Day2.swift in Sources */,

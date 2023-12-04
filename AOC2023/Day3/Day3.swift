@@ -3,11 +3,7 @@ import Foundation
 struct Day3 {
     
     struct Part1 {
-        
-        static func invalidPartNumbers(_ input: String) -> [Int] {
-            return []
-        }
-        
+                
         static func sum(_ input: String) -> Int {
             let engine = Day3.EngineSchematic.fromInput(input)
             return engine
@@ -18,4 +14,15 @@ struct Day3 {
         }
     }
     
+    struct Part2 {
+        
+        static func sum(_ input: String) -> Int {
+            let engine = Day3.EngineSchematic.fromInput(input)
+            return engine
+                .gears()
+                .reduce(0) { acc, next in
+                    return acc + next.ratio
+                }
+        }
+    }
 }
