@@ -34,10 +34,17 @@ extension Array where ArrayLiteralElement == Int {
     
 }
 
-extension Array {
+extension Sequence {
     
-    func reject(_ fn: (ArrayLiteralElement) -> Bool) -> [ArrayLiteralElement] {
+    func reject(_ fn: (Element) -> Bool) -> [Element] {
         return filter { !fn($0) }
+    }
+    
+    func tap(_ fn: (Element) -> Void) -> [Element] {
+        return map {
+            fn($0)
+            return $0
+        }
     }
     
 }
