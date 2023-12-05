@@ -22,9 +22,19 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
         XCTAssertEqual(13, Day4.Part1.worth(sampleInput))
     }
 
-    func testPart2() throws {
+    func testPart1() throws {
         let input = try TestHelpers.readFile(named: "Day4")
         XCTAssertEqual(21959, Day4.Part1.worth(input))
+    }
+
+    func testPart2Sample() throws {
+        XCTAssertEqual(30, Day4.Part2.numberOfScratchcards(sampleInput))
+    }
+    
+    func testPart2() throws {
+        let input = try TestHelpers.readFile(named: "Day4")
+
+        XCTAssertEqual(5132675, Day4.Part2.numberOfScratchcards(input))
     }
 
 
