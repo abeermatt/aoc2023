@@ -9,7 +9,6 @@ struct Day3 {
             return engine
                 .validPartNumbers()
                 .map(\.value)
-                .tap { print($0) }
                 .sum()
         }
     }

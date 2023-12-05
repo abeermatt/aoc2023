@@ -64,7 +64,6 @@ struct Day4 {
                         }
                     }
                 }
-                .tap { print($0) }
                 
                 return copies.reduce(0) { acc, next in
                     acc + next.value
