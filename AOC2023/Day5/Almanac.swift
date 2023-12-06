@@ -12,6 +12,8 @@ extension Day5 {
         let temperatureToHumidity: MMap
         let humidityToLocation: MMap
         
+        var cache: [Int: Int] = [:]
+        
         func getSoil(forSeed seed: Int) -> Int {
             return seedToSoil.getDestination(forSource: seed)
         }

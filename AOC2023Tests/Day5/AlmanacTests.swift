@@ -80,7 +80,7 @@ humidity-to-location map:
     }
     
     func testGetLocationBySeed() throws {
-        let almanac = Day5.Almanac.fromInput(sampleInput)
+        var almanac = Day5.Almanac.fromInput(sampleInput)
         XCTAssertEqual(82, almanac.getLocation(forSeed: 79))
         XCTAssertEqual(43, almanac.getLocation(forSeed: 14))
         XCTAssertEqual(86, almanac.getLocation(forSeed: 55))

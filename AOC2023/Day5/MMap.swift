@@ -12,10 +12,14 @@ extension Day5 {
     struct MMap {
         
         let ranges: [MRange]
+        let sourceRange: Range<Int>
         
         func getDestination(forSource source: Int) -> Int {
-            if let destination = ranges.compactMap({ $0.getDestination(forSource: source) }).first {
-                return destination
+            guard sourceRange.contains(source) else {
+                return source
+            }
+            if let match = ranges.first(where: { $0.getDestination(forSource: source) != nil }) {
+                return match.getDestination(forSource: source)!
             }
             return source
         }
@@ -28,8 +32,14 @@ extension Day5 {
             let ranges = input
                 .reject(\.isEmpty)
                 .map(MRange.fromInput(_:))
+                .sorted(by: { $0.sourceRange.startIndex < $1.sourceRange.startIndex})
             
-            return MMap(ranges: ranges)
+            let minimumIndex = ranges.first!.sourceRange.startIndex
+            let maximumIndex = ranges.last!.sourceRange.endIndex
+            
+            print("minimumIndex: \(minimumIndex), maximumIndex \(maximumIndex)")
+            
+            return MMap(ranges: ranges, sourceRange: minimumIndex..<maximumIndex)
         }
 
     }

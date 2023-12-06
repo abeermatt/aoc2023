@@ -56,10 +56,18 @@ humidity-to-location map:
 
     }
 
-    func testPart2Sample() throws {
+    func testPart2Sample() async throws {
+        let result = await Day5.Part2.lowestLocation(sampleInput)
+        XCTAssertEqual(46, result)
+
     }
     
-    func testPart2() throws {
+    
+    func xtestPart2() async throws {
+        let input = try TestHelpers.readFile(named: "Day5")
+        let result = await Day5.Part2.lowestLocation(input)
+        XCTAssertEqual(63179500, result)
+
     }
 
 
