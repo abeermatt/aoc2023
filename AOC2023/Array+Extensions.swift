@@ -52,6 +52,9 @@ extension Array where ArrayLiteralElement == Int {
         return self.reduce(0, +)
     }
     
+    func product() -> Int {
+        return self.reduce(1, *)
+    }
 }
 
 extension Sequence {
