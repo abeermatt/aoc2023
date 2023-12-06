@@ -39,8 +39,14 @@ Distance:  9  40  200
         let input = try TestHelpers.readFile(named: "Day6")
 
         XCTAssertEqual(1155175, Day6.Part1.marginOfError(forInput: input))
-
     }
 
+    func testMarginOfErrorPart2() throws {
+        XCTAssertEqual(71503, Day6.Part1.waysOfBeating(raceRecord: 940200, forRaceLasting: 71530))
+    }
+
+    func testPart2() throws {
+        XCTAssertEqual(35961505, Day6.Part1.waysOfBeating(raceRecord: 601116315591300, forRaceLasting: 60808676))
+    }
 
 }
