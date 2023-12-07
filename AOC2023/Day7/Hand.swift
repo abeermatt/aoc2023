@@ -7,19 +7,28 @@ extension Day7 {
         let cards: [Card]
         let bid: Int
         let strength: HandStrength
-        
+                
         func winAmount(forRank rank: Int) -> Int {
             return bid * rank
         }
         
-        static func parse(_ input: String) -> Self {
+        static func parse(_ input: String, usingJokerAsWildcard: Bool = false) -> Self {
             let cards = input[input.startIndex..<input.index(input.startIndex, offsetBy: 5)].map(Card.parse)
             let bid = input[input.index(input.startIndex, offsetBy: 6)...]
-            let strength = HandStrength.from(cards)
+            let strength = HandStrength.from(cards, usingJokerAsWildcard: usingJokerAsWildcard)
             return .init(cards: cards, bid: Int(bid)!, strength: strength)
         }
+        
+        
     }
     
+}
+
+extension Day7.Hand: CustomStringConvertible {
+    
+    var description: String {
+        return "Hand { Cards: \(cards.map(\.description).joined(separator: "")), Strength: \(strength), Bid: \(bid) }"
+    }
 }
 
 extension Day7.Hand: Comparable {
@@ -37,7 +46,11 @@ extension Day7.Hand: Comparable {
             }
         }
         return false
+        
     }
     
+    
+}
+extension Day7 {
     
 }

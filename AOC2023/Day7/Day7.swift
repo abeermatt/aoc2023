@@ -5,7 +5,7 @@ struct Day7 {
             return input
                 .components(separatedBy: .newlines)
                 .reject(\.isEmpty)
-                .map(Day7.Hand.parse(_:))
+                .map { Day7.Hand.parse($0, usingJokerAsWildcard: false) }
                 .sorted()
                 .enumerated()
                 .map { pair in
@@ -16,5 +16,23 @@ struct Day7 {
                 .sum()
         }
         
+    }
+    
+    struct Part2 {
+        
+        static func totalWinnings(_ input: String) -> Int {
+            return input
+                .components(separatedBy: .newlines)
+                .reject(\.isEmpty)
+                .map { Day7.Hand.parse($0, usingJokerAsWildcard: true) }
+                .sorted()
+                .enumerated()
+                .map { pair in
+                    let (index, hand) = pair
+                    let rank = (index + 1)
+                    return hand.winAmount(forRank: rank)
+                }
+                .sum()
+        }
     }
 }

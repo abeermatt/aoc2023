@@ -9,16 +9,42 @@ import Foundation
 
 extension Day7 {
     enum HandStrength {
-        case highCard
-        case onePair
-        case twoPair
-        case threeOfAKind
-        case fullHouse
-        case fourOfAKind
-        case fiveOfAKind
+        case highCard // XABCD
+        case onePair // XXABC
+        case twoPair // XXAAC
+        case threeOfAKind // XXXAC
+        case fullHouse // XXXAA
+        case fourOfAKind // XXXXA
+        case fiveOfAKind // XXXXX
+        
+        func withJokers(_ count: Int) -> Self {
+            if count == 0 {
+                return self
+            }
+            switch self {
+            case .fiveOfAKind: return .fiveOfAKind
+            case .fourOfAKind: return .fiveOfAKind
+            case .fullHouse: return .fiveOfAKind
+            case .threeOfAKind: return .fourOfAKind
+            case .twoPair: return count == 1 ? .fullHouse : .fourOfAKind
+            case .onePair: return .threeOfAKind
+            case .highCard: return .onePair
+            }
+        }
                 
-        static func from(_ cards: [Card]) -> Self {
+        static func from(_ cards: [Card], usingJokerAsWildcard: Bool = false) -> Self {
             let groups = Dictionary(grouping: cards, by: { $0 })
+            let strength = strengthForGroups(groups)
+            if usingJokerAsWildcard {
+                let numberJokers = groups[Card.J]?.count ?? 0
+                let strength = strength.withJokers(numberJokers)
+                print("Cards \(cards.map(\.description).joined(separator: "")), Strength: \(strength), JokerCount \(numberJokers)")
+                return strength
+            }
+            return strength
+        }
+        
+        private static func strengthForGroups(_ groups: Dictionary<Day7.Card, [Day7.Card]>) -> Self {
             switch groups.count {
             case 5: return .highCard
             case 4: return .onePair
@@ -34,4 +60,5 @@ extension Day7 {
         }
     }
 }
-extension Day7.HandStrength: Comparable {}
+extension Day7.HandStrength: Comparable {
+}

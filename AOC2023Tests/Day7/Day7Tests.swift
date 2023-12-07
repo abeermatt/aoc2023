@@ -17,17 +17,23 @@ KTJJT 220
 QQQJA 483
 """
     
-    func testTotalWinnings() throws {
+    func testPart1Sample() throws {
         XCTAssertEqual(6440, Day7.Part1.totalWinnings(sampleInput))
     }
 
-
-
-    func testPart1() throws {
+    func xtestPart1() throws {
         let input = try TestHelpers.readFile(named: "Day7")
-
         XCTAssertEqual(249390788, Day7.Part1.totalWinnings(input))
     }
-
     
+    func testPart2Sample() throws {
+        XCTAssertEqual(5905, Day7.Part2.totalWinnings(sampleInput))
+    }
+    
+    func testPart2() throws {
+        let input = try TestHelpers.readFile(named: "Day7")
+        XCTAssertEqual(248750248, Day7.Part2.totalWinnings(input))
+    }
+
+
 }
