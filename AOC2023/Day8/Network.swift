@@ -1,10 +1,3 @@
-//
-//  Network.swift
-//  AOC2023
-//
-//  Created by Matthew Hobbs on 08/12/2023.
-//
-
 import Foundation
 
 extension Day8 {
@@ -24,8 +17,6 @@ extension Day8 {
         }
         
         mutating func bump() {
-            print("index \(index) direction \(direction)")
-            
             index = line.index(after: index)
             if index == line.endIndex {
                 index = line.startIndex
@@ -40,36 +31,40 @@ extension Day8 {
     struct Network {
         
         let nodes: [String: Node]
-        let start = "AAA"
-        let finish = "ZZZ"
         
-        func walk(withInstructions instructions: Instructions) -> Int {
-            var node = nodes[start]!
-            var count = 0
+        func walk2(withInstructions instructions: Instructions) async -> Int {
+            let starts = nodes.filter {  $0.key.hasSuffix("A") }
             
+            
+            let counts = await starts.parallelMap { (_, start) in
+                let count = walk(withInstructions: instructions, startingAt: start, endingByMatching: { $0.id.hasSuffix("Z") })
+                return count
+
+            }
+            return LeastCommonMultiplerCalculator().lcm(forNumbers: counts)
+            
+        }
+        
+        
+        func walk(withInstructions instructions: Instructions, startingAt startNode: Node, endingByMatching match: (Node) -> Bool) -> Int {
+            var count = 0
+            var node = startNode
             var mutable = instructions
             
-            while (node.id != finish) {
+            while (match(node) == false) {
                 let nextId = node.next(mutable.direction)
                 node = nodes[nextId]!
                 mutable.bump()
                 count+=1
             }
             return count
+
         }
         
-        private func walk(instructions: Instructions, node: Node, count: Int) -> Int {
-            if node.id == finish {
-                return count
-            }
-            let direction = instructions.direction
-            let next = node.next(direction)
-            let nextNode = nodes[next]!
-            
-            var mutable = instructions
-            return walk(instructions: mutable.bump(), node: nextNode, count: count + 1)
+        func walk(withInstructions instructions: Instructions) -> Int {
+            return walk(withInstructions: instructions, startingAt: nodes["AAA"]!, endingByMatching: { $0.id == "ZZZ" })
         }
-        
+                
         func node(named name: String) -> Node {
             return nodes[name]!
         }
@@ -102,9 +97,7 @@ extension Day8 {
             case .right: return right
             }
         }
-        
-//        func route(to: )
-        
+                
         static let regex = /(\w+) = \((\w+), (\w+)\)/
         
         static func parse(_ input: String) -> Self {

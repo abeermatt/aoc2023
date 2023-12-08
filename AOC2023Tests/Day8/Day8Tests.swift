@@ -40,13 +40,27 @@ ZZZ = (ZZZ, ZZZ)
         XCTAssertEqual(18673, Day8.Part1.stepCount(input))
     }
     
-    func testPart2Sample() throws {
-        XCTAssertEqual(5905, Day8.Part2.run(sampleInput1))
+    func testPart2Sample() async throws {
+        let input = """
+LR
+
+11A = (11B, XXX)
+11B = (XXX, 11Z)
+11Z = (11B, XXX)
+22A = (22B, XXX)
+22B = (22C, 22C)
+22C = (22Z, 22Z)
+22Z = (22B, 22B)
+XXX = (XXX, XXX)
+"""
+        let actual = await Day8.Part2.stepCount(input)
+        XCTAssertEqual(6, actual)
     }
     
-    func testPart2() throws {
+    func testPart2() async throws {
         let input = try TestHelpers.readFile(named: "Day8")
-        XCTAssertEqual(248750248, Day8.Part2.run(input))
+        let actual = await Day8.Part2.stepCount(input)
+        XCTAssertEqual(17972669116327, actual)
     }
 
 
