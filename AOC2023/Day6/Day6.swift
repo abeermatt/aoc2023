@@ -25,12 +25,8 @@ struct Day6 {
             let times = lines[0].takePrefix("Time:").trimmingCharacters(in: .whitespaces).components(separatedBy: .whitespaces).reject(\.isEmpty)
             let distances = lines[1].takePrefix("Distance:").trimmingCharacters(in: .whitespaces).components(separatedBy: .whitespaces).reject(\.isEmpty)
             
-            print("times \(times)")
-            print("distances \(distances)")
-            
             return zip(times, distances)
                 .compactMap { pair in
-                    print(pair)
                     if pair == ("" ,"") {
                         return nil
                     }

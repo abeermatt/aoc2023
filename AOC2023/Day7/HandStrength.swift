@@ -38,7 +38,6 @@ extension Day7 {
             if usingJokerAsWildcard {
                 let numberJokers = groups[Card.J]?.count ?? 0
                 let strength = strength.withJokers(numberJokers)
-                print("Cards \(cards.map(\.description).joined(separator: "")), Strength: \(strength), JokerCount \(numberJokers)")
                 return strength
             }
             return strength

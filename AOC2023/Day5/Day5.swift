@@ -31,7 +31,6 @@ struct Day5 {
                 .chunk(every: 2)
             
             return await pairs.parallelMap(parallelism: 4) { pair in
-                    print("processing pair \(pair)")
                     let start = Int(pair[0])!
                     let length = Int(pair[1])!
                     let end = start + length

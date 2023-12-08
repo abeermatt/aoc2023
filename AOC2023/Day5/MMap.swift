@@ -37,8 +37,6 @@ extension Day5 {
             let minimumIndex = ranges.first!.sourceRange.startIndex
             let maximumIndex = ranges.last!.sourceRange.endIndex
             
-            print("minimumIndex: \(minimumIndex), maximumIndex \(maximumIndex)")
-            
             return MMap(ranges: ranges, sourceRange: minimumIndex..<maximumIndex)
         }
 
