@@ -57,6 +57,29 @@ extension Array where ArrayLiteralElement == Int {
     }
 }
 
+extension Array where Element == Int {
+    
+    func areAllTheSame() -> Bool {
+        guard let first = first else {
+            return true
+        }
+        return allSatisfy { $0 == first }
+    }
+    
+    func stepDifferences() -> [Int] {
+        guard let first = first else {
+            return []
+        }
+        return self[1...].reduce(([], first)) { acc, next in
+            var (steps, previous) = acc
+            steps.append(next - previous)
+            return (steps, next)
+        }.0
+        
+    }
+}
+
+
 extension Sequence {
     
     func reject(_ fn: (Element) -> Bool) -> [Element] {
