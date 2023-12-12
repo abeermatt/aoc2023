@@ -48,7 +48,7 @@ L|-JF
             var tile = start
             var tiles: [Tile] = []
             
-            while tiles.isEmpty || !tile.isStart {
+            while true {
                 let nextCoordinate = tile.coordinate.move(inDirection: direction)
                 tiles.append(tile)
                 tile = self.tile(atCoordinate: nextCoordinate)!
