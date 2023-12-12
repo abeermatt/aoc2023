@@ -23,9 +23,6 @@ extension Day10 {
             }
         }
         
-        func connects(to direction: Direction) -> Bool {
-            return self.opposite == direction
-        }
     }
         
 
