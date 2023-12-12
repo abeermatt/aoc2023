@@ -80,6 +80,15 @@
 		AFDF40AA2B21BE5300C89269 /* HandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40A92B21BE5300C89269 /* HandTests.swift */; };
 		AFDF40AC2B21BF3E00C89269 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40AB2B21BF3E00C89269 /* Card.swift */; };
 		AFDF40AD2B21C11B00C89269 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40AB2B21BF3E00C89269 /* Card.swift */; };
+		AFE7791C2B28CB8D0054F226 /* Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7791B2B28CB8D0054F226 /* Universe.swift */; };
+		AFE7791D2B28CB8D0054F226 /* Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7791B2B28CB8D0054F226 /* Universe.swift */; };
+		AFE7791E2B28CB9F0054F226 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE779182B28C9240054F226 /* Day11.swift */; };
+		AFE7791F2B28CB9F0054F226 /* Day11.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE779182B28C9240054F226 /* Day11.swift */; };
+		AFE779202B28CBA50054F226 /* Day11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7791A2B28C9380054F226 /* Day11Tests.swift */; };
+		AFE779222B28CBB20054F226 /* UniverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE779212B28CBB20054F226 /* UniverseTests.swift */; };
+		AFE779252B2908620054F226 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = AFE779242B2908620054F226 /* Algorithms */; };
+		AFE779282B2908DC0054F226 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = AFE779272B2908DC0054F226 /* Algorithms */; };
+		AFE779292B290E6A0054F226 /* Day11.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFE779192B28C9380054F226 /* Day11.txt */; };
 		AFECC3D82B1A3842006034F0 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC3D72B1A3842006034F0 /* TestHelpers.swift */; };
 		AFECC3DA2B1A3BF1006034F0 /* Day1Input.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFECC3D92B1A3BF1006034F0 /* Day1Input.txt */; };
 		AFECC3DD2B1B9A2F006034F0 /* String+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECC3DC2B1B9A2F006034F0 /* String+ExtensionsTests.swift */; };
@@ -198,6 +207,11 @@
 		AFDF40A42B21BDB600C89269 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		AFDF40A92B21BE5300C89269 /* HandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTests.swift; sourceTree = "<group>"; };
 		AFDF40AB2B21BF3E00C89269 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AFE779182B28C9240054F226 /* Day11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11.swift; sourceTree = "<group>"; };
+		AFE779192B28C9380054F226 /* Day11.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day11.txt; sourceTree = "<group>"; };
+		AFE7791A2B28C9380054F226 /* Day11Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day11Tests.swift; sourceTree = "<group>"; };
+		AFE7791B2B28CB8D0054F226 /* Universe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universe.swift; sourceTree = "<group>"; };
+		AFE779212B28CBB20054F226 /* UniverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseTests.swift; sourceTree = "<group>"; };
 		AFECC3D72B1A3842006034F0 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		AFECC3D92B1A3BF1006034F0 /* Day1Input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day1Input.txt; sourceTree = "<group>"; };
 		AFECC3DC2B1B9A2F006034F0 /* String+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionsTests.swift"; sourceTree = "<group>"; };
@@ -235,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE779282B2908DC0054F226 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE779252B2908620054F226 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +290,7 @@
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AFE779172B28C91F0054F226 /* Day11 */,
 				AFA148032B26458A006347F3 /* Day10 */,
 				AFA147F12B248222006347F3 /* Day9 */,
 				AFB8DEFE2B2316080055A02B /* Day8 */,
@@ -398,6 +415,32 @@
 			path = Day7;
 			sourceTree = "<group>";
 		};
+		AFE779162B28C9190054F226 /* Day11 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE779182B28C9240054F226 /* Day11.swift */,
+				AFE7791B2B28CB8D0054F226 /* Universe.swift */,
+			);
+			path = Day11;
+			sourceTree = "<group>";
+		};
+		AFE779172B28C91F0054F226 /* Day11 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7791A2B28C9380054F226 /* Day11Tests.swift */,
+				AFE779192B28C9380054F226 /* Day11.txt */,
+				AFE779212B28CBB20054F226 /* UniverseTests.swift */,
+			);
+			path = Day11;
+			sourceTree = "<group>";
+		};
+		AFE779262B2908DC0054F226 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFECC3DB2B1B6DAE006034F0 /* Day1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +529,7 @@
 				AFFC6DF72B17817300C04F8D /* AOC2023 */,
 				AF60ED672B188F38001DC88B /* AOC2023Tests */,
 				AFFC6DF62B17817300C04F8D /* Products */,
+				AFE779262B2908DC0054F226 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -501,6 +545,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AFE779162B28C9190054F226 /* Day11 */,
 				AFA148022B264584006347F3 /* Day10 */,
 				AFA147EF2B24820C006347F3 /* Day9 */,
 				AFB8DEFD2B2316010055A02B /* Day8 */,
@@ -536,6 +581,9 @@
 				AF60ED722B189000001DC88B /* PBXTargetDependency */,
 			);
 			name = AOC2023Tests;
+			packageProductDependencies = (
+				AFE779272B2908DC0054F226 /* Algorithms */,
+			);
 			productName = AOC2023Tests;
 			productReference = AF60ED662B188F38001DC88B /* AOC2023Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -553,6 +601,9 @@
 			dependencies = (
 			);
 			name = AOC2023;
+			packageProductDependencies = (
+				AFE779242B2908620054F226 /* Algorithms */,
+			);
 			productName = AOC2023;
 			productReference = AFFC6DF52B17817300C04F8D /* AOC2023 */;
 			productType = "com.apple.product-type.tool";
@@ -584,6 +635,9 @@
 				Base,
 			);
 			mainGroup = AFFC6DEC2B17817300C04F8D;
+			packageReferences = (
+				AFE779232B2908620054F226 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = AFFC6DF62B17817300C04F8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -604,6 +658,7 @@
 				AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */,
 				AFDF40992B21072800C89269 /* Day6.txt in Resources */,
 				AFB8DF072B231C340055A02B /* Day7.txt in Resources */,
+				AFE779292B290E6A0054F226 /* Day11.txt in Resources */,
 				AFECC3DA2B1A3BF1006034F0 /* Day1Input.txt in Resources */,
 				AFA147F72B248285006347F3 /* Day9.txt in Resources */,
 				AF1C96CC2B21F04D00599156 /* Day8.txt in Resources */,
@@ -629,6 +684,7 @@
 				AFECC4052B1D15A6006034F0 /* Day3.swift in Sources */,
 				AFECC3E02B1B9BB7006034F0 /* String+Extensions.swift in Sources */,
 				AFECC3E92B1BAAFA006034F0 /* RecordTests.swift in Sources */,
+				AFE7791D2B28CB8D0054F226 /* Universe.swift in Sources */,
 				AFB8DF0A2B231C470055A02B /* Day7.swift in Sources */,
 				AFECC3D82B1A3842006034F0 /* TestHelpers.swift in Sources */,
 				AFECC4132B1D31CC006034F0 /* EngineSchematicTests.swift in Sources */,
@@ -638,12 +694,14 @@
 				AFECC4082B1D15AE006034F0 /* Symbol.swift in Sources */,
 				AFA147EC2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
 				AFA147F62B248280006347F3 /* Day9Tests.swift in Sources */,
+				AFE7791F2B28CB9F0054F226 /* Day11.swift in Sources */,
 				AFECC40A2B1D15DC006034F0 /* PartNumberTests.swift in Sources */,
 				AFA147FC2B2483E0006347F3 /* HistoryTests.swift in Sources */,
 				AFDF40A32B21BD7200C89269 /* HandStrengthTests.swift in Sources */,
 				AFB8DF0C2B231E0B0055A02B /* NetworkTests.swift in Sources */,
 				AFECC41D2B1E5364006034F0 /* Day4Tests.swift in Sources */,
 				AF60ED6E2B188F4C001DC88B /* Array+ExtensionTests.swift in Sources */,
+				AFE779222B28CBB20054F226 /* UniverseTests.swift in Sources */,
 				AF095ECF2B1FB5EC00255338 /* Day5Tests.swift in Sources */,
 				AFA1480B2B26470B006347F3 /* Day10.swift in Sources */,
 				AFB8DF022B231B2C0055A02B /* NodeTests.swift in Sources */,
@@ -659,6 +717,7 @@
 				AF095EC72B1F886800255338 /* MMap.swift in Sources */,
 				AFECC3F12B1BABE7006034F0 /* Game.swift in Sources */,
 				AFECC3E32B1BA5CC006034F0 /* Day2Tests.swift in Sources */,
+				AFE779202B28CBA50054F226 /* Day11Tests.swift in Sources */,
 				AFDF40A12B21BD6300C89269 /* HandStrength.swift in Sources */,
 				AFA147EE2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift in Sources */,
 				AF095EC22B1F86BB00255338 /* MRange.swift in Sources */,
@@ -699,6 +758,7 @@
 				AFECC41F2B1E5374006034F0 /* Day4.swift in Sources */,
 				AF095EC12B1F866B00255338 /* MRange.swift in Sources */,
 				AFA147FE2B2484CD006347F3 /* Oasis.swift in Sources */,
+				AFE7791E2B28CB9F0054F226 /* Day11.swift in Sources */,
 				AFECC3DF2B1B9AFE006034F0 /* String+Extensions.swift in Sources */,
 				AF095EC62B1F885A00255338 /* MMap.swift in Sources */,
 				AFDF40A62B21BE1100C89269 /* Day8.swift in Sources */,
@@ -717,6 +777,7 @@
 				AFA147F42B24827B006347F3 /* Day9.swift in Sources */,
 				AFECC4112B1D30B5006034F0 /* Schema.swift in Sources */,
 				AFA4A4F02B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
+				AFE7791C2B28CB8D0054F226 /* Universe.swift in Sources */,
 				AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */,
 				AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
 				AFA148082B264648006347F3 /* Pipe.swift in Sources */,
@@ -940,6 +1001,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFE779232B2908620054F226 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFE779242B2908620054F226 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFE779232B2908620054F226 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		AFE779272B2908DC0054F226 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFE779232B2908620054F226 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFFC6DED2B17817300C04F8D /* Project object */;
 }

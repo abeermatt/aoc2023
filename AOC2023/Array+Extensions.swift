@@ -35,6 +35,12 @@ extension Array {
         return result
     }
     
+    func duplicateElement(at index: Int) -> [Element] {
+        var mutable = self
+        let contents = self[index]
+        mutable.insert(contents, at: index.advanced(by: 1))
+        return mutable
+    }
 
 }
 
