@@ -6,10 +6,15 @@ extension Day11 {
     struct Universe {
         
         let grid: [[Occupier]]
+        let columnsToExpand: [Int]
+        let rowsToExpand: [Int]
         let galaxies: [Int: Galaxy]
+        let expansion: Int
         
-        init(grid: [[Occupier]]) {
+        init(grid: [[Occupier]], expansion: Int = 2) {
             self.grid = grid
+            self.columnsToExpand = Self.detectColumnsToExpand(grid)
+            self.rowsToExpand = Self.detectRowsToExpand(grid)
             self.galaxies = grid.reduce([:]) { acc, row in
                 return row.reduce(acc) { acc, col in
                     if case let .galaxy(galaxy) = col {
@@ -20,6 +25,7 @@ extension Day11 {
                     return acc
                 }
             }
+            self.expansion = expansion
         }
         
         func prettyPrinted() -> String {
@@ -32,62 +38,52 @@ extension Day11 {
                 }
                 .joined(separator: "\n")
         }
-        
-        func expanded() -> Self {
-            return self
-                .duplicateEmptyColumns()
-                .duplicateEmptyRows()
-                .adjustCoordinates()
-        }
-        
-        private func duplicateEmptyColumns() -> Self {
+                
+        private static func detectColumnsToExpand(_ grid: [[Occupier]]) -> [Int] {
             var columnsToExpand: [Int] = []
             for (index, _) in grid.first!.enumerated() {
                 let column = grid.map { $0[index] }
                 if column.allSatisfy(\.isSpace) {
-                    columnsToExpand.append(index + columnsToExpand.count)
+                    columnsToExpand.append(index)
                 }
             }
-            let expanded = columnsToExpand.reduce(grid) { grid, columnIndex in
-                return grid.map { $0.duplicateElement(at: columnIndex) }
-            }
-            return .init(grid: expanded)
+            return columnsToExpand
         }
         
-        private func duplicateEmptyRows() -> Self {
+        private static func detectRowsToExpand(_ grid: [[Occupier]]) -> [Int] {
             var rowsToExpand: [Int] = []
             for (index, row) in grid.enumerated() {
                 if row.allSatisfy(\.isSpace) {
-                    rowsToExpand.append(index + rowsToExpand.count)
+                    rowsToExpand.append(index)
                 }
             }
-            let expanded = rowsToExpand.reduce(grid) { $0.duplicateElement(at: $1) }
-
-            return .init(grid: expanded)
+            return rowsToExpand
         }
         
-        private func adjustCoordinates() -> Self {
-            let updated = grid
-                .enumerated()
-                .map { (row, line) in
-                    return line
-                        .enumerated()
-                        .map { (col, occupier) in
-                            switch occupier {
-                            case .galaxy(let galaxy):
-                                return Occupier.galaxy(galaxy.withCoordinates(x: col, y: row))
-                            case .space:
-                                return Occupier.space
-                            }
-                        }
-                }
-            return .init(grid: updated)
+        func coordinate(forGalaxy id: Int) -> Coordinate {
+            return adjustCoordinate(galaxies[id]!.coordinate)
         }
                 
+        func adjustCoordinate(_ coordinate: Coordinate) -> Coordinate {
+            
+            let blankColumns = columnsToExpand.filter { $0 < coordinate.x }.count
+            let blankRows = rowsToExpand.filter { $0 < coordinate.y }.count
+
+            let xAdjustment = (blankColumns * expansion) - (blankColumns * 1)
+            let yAdjustment = (blankRows * expansion) - (blankRows * 1)
+
+            return .init(x: coordinate.x + xAdjustment, y: coordinate.y + yAdjustment)
+        }
+
         func distance(betweenGalaxyAt start: Int, and end: Int) -> Int {
-            let startCoordinate = galaxies[start]!.coordinate
-            let endCoordinate = galaxies[end]!.coordinate
+            let startCoordinate = coordinate(forGalaxy: start)
+            let endCoordinate = coordinate(forGalaxy: end)
+
             return abs(endCoordinate.x - startCoordinate.x) + abs(endCoordinate.y - startCoordinate.y)
+        }
+        
+        func expanded(by count: Int) -> Self {
+            return .init(grid: grid, expansion: count)
         }
         
         func pairs() -> [(Galaxy, Galaxy)] {
@@ -129,6 +125,11 @@ extension Day11 {
     struct Coordinate: Equatable {
         let x: Int
         let y: Int
+        
+//        func distance(to: Self, adjustment: Int) -> Int {
+//            return abs(endCoordinate.x - startCoordinate.x + columnsToExpand.count * expansion) + abs(endCoordinate.y - startCoordinate.y + rowsToExpand.count  * expansion)
+//
+//        }
     }
     
     struct Galaxy: Equatable {
