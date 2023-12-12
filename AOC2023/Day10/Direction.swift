@@ -10,9 +10,9 @@ import Foundation
 extension Day10 {
     enum Direction: CaseIterable {
         case north
+        case east
         case south
         case west
-        case east
         
         var opposite: Direction {
             switch self {

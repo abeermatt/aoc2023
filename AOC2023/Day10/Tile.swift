@@ -17,6 +17,10 @@ extension Day10 {
             return pipe == .start
         }
         
+        var isGround: Bool {
+            return pipe == .ground
+        }
+        
         func moveForward(inLandscape landscape: Landscape, inDirection direction: Direction) -> Tile? {
             return nil
 //            pipe.

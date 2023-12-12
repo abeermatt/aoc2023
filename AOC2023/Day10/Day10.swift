@@ -11,7 +11,8 @@ struct Day10 {
     struct Part2 {
         
         static func run(_ input: String) -> Int {
-            return 0
+            let landscape = Landscape.parse(input)
+            return landscape.interiorPoints()
         }
     }
 }

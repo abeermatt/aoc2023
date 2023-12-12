@@ -73,7 +73,7 @@ L--J.L7...LJS7F-7L7.
     
     func testPart2() throws {
         let input = try TestHelpers.readFile(named: "Day10")
-        XCTAssertEqual(1068, Day10.Part2.run(input))
+        XCTAssertEqual(287, Day10.Part2.run(input))
     }
 
 

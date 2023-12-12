@@ -8,7 +8,7 @@
 import Foundation
 
 extension Day10 {
-    struct Coordinate: Equatable {
+    struct Coordinate: Equatable, Hashable {
         let x: Int
         let y: Int
         
