@@ -16,21 +16,20 @@ extension Day10 {
                 
         func endDirection(fromStart start: Direction) -> Direction? {
             switch (self, start) {
-            case (.northSouth, .north): return .south
-            case (.northSouth, .south): return .north
-            case (.eastWest, .west): return .east
-            case (.eastWest, .east): return .west
-            case (.northEast, .north): return .east
-            case (.northEast, .east): return .north
-            case (.northWest, .north): return .west
-            case (.northWest, .west): return .north
-            case (.southWest, .south): return .west
-            case (.southWest, .west): return .south
-            case (.southEast, .south): return .east
-            case (.southEast, .east): return .south
-            default: return nil
+            case (.start, _): return nil
+            default:
+                var copy = directions
+                copy.remove(start)
+                return copy == directions ? nil : copy.first
             }
         }
+        
+        func connect(from: Direction) -> Direction? {
+            var copy = directions
+            copy.remove(from)
+            return copy == directions ? nil : copy.first
+        }
+        
                 
         func canConnect(with pipe: Pipe, fromDirection direction: Direction) -> Bool {
             

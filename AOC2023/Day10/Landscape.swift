@@ -33,7 +33,7 @@ L|-JF
                 
         func walk() -> [Tile] {
 //            print("start \(start)")
-            let candidates = start.pipe.directions.filter { direction in
+            var direction = Direction.allCases.first { direction in
 //                print("direction \(direction)")
                 let nextCoordinate = start.coordinate.move(inDirection: direction)
 //                print("nextCoordinate \(nextCoordinate)")
@@ -43,16 +43,15 @@ L|-JF
                     return valid
                 }
                 return false
-            }
+            }!
             
-            var direction = candidates.first!
             var tile = start
             var tiles: [Tile] = []
             
             while tiles.isEmpty || !tile.isStart {
                 let nextCoordinate = tile.coordinate.move(inDirection: direction)
-                tile = self.tile(atCoordinate: nextCoordinate)!
                 tiles.append(tile)
+                tile = self.tile(atCoordinate: nextCoordinate)!
                 if tile.isStart {
                     break
                 }
