@@ -46,6 +46,14 @@
 		AFA1480B2B26470B006347F3 /* Day10.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA148062B264594006347F3 /* Day10.swift */; };
 		AFA4A4E72B27B66E00CFC8F8 /* Day10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA148042B26458F006347F3 /* Day10Tests.swift */; };
 		AFA4A4E82B27B69700CFC8F8 /* Day10.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFA148052B264590006347F3 /* Day10.txt */; };
+		AFA4A4EA2B28539C00CFC8F8 /* Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4E92B28539C00CFC8F8 /* Landscape.swift */; };
+		AFA4A4EB2B28539C00CFC8F8 /* Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4E92B28539C00CFC8F8 /* Landscape.swift */; };
+		AFA4A4ED2B2853B600CFC8F8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4EC2B2853B600CFC8F8 /* Tile.swift */; };
+		AFA4A4EE2B2853B600CFC8F8 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4EC2B2853B600CFC8F8 /* Tile.swift */; };
+		AFA4A4F02B2853CC00CFC8F8 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4EF2B2853CC00CFC8F8 /* Coordinate.swift */; };
+		AFA4A4F12B2853CC00CFC8F8 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4EF2B2853CC00CFC8F8 /* Coordinate.swift */; };
+		AFA4A4F32B2853E100CFC8F8 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4F22B2853E100CFC8F8 /* Direction.swift */; };
+		AFA4A4F42B2853E100CFC8F8 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A4F22B2853E100CFC8F8 /* Direction.swift */; };
 		AFA4E9902B18A7B500126B28 /* Day1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4E98F2B18A7B500126B28 /* Day1Tests.swift */; };
 		AFA4E9922B18AD3900126B28 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6146BD2B1799D2000091C8 /* Day1.swift */; };
 		AFB8DF002B2318410055A02B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8DEFF2B2318410055A02B /* Network.swift */; };
@@ -166,6 +174,10 @@
 		AFA148052B264590006347F3 /* Day10.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day10.txt; sourceTree = "<group>"; };
 		AFA148062B264594006347F3 /* Day10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10.swift; sourceTree = "<group>"; };
 		AFA148072B264648006347F3 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		AFA4A4E92B28539C00CFC8F8 /* Landscape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landscape.swift; sourceTree = "<group>"; };
+		AFA4A4EC2B2853B600CFC8F8 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		AFA4A4EF2B2853CC00CFC8F8 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		AFA4A4F22B2853E100CFC8F8 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		AFA4E98F2B18A7B500126B28 /* Day1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1Tests.swift; sourceTree = "<group>"; };
 		AFA4E9912B18AA2700126B28 /* AOC2023.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AOC2023.xctestplan; sourceTree = "<group>"; };
 		AFB8DEFF2B2318410055A02B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -306,6 +318,10 @@
 			children = (
 				AFA148062B264594006347F3 /* Day10.swift */,
 				AFA148072B264648006347F3 /* Pipe.swift */,
+				AFA4A4E92B28539C00CFC8F8 /* Landscape.swift */,
+				AFA4A4EC2B2853B600CFC8F8 /* Tile.swift */,
+				AFA4A4EF2B2853CC00CFC8F8 /* Coordinate.swift */,
+				AFA4A4F22B2853E100CFC8F8 /* Direction.swift */,
 			);
 			path = Day10;
 			sourceTree = "<group>";
@@ -604,10 +620,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA4E9922B18AD3900126B28 /* Day1.swift in Sources */,
+				AFA4A4F42B2853E100CFC8F8 /* Direction.swift in Sources */,
 				AF095EC32B1F86C700255338 /* Day5.swift in Sources */,
 				AFA147FA2B2483D3006347F3 /* History.swift in Sources */,
 				AFA148092B264648006347F3 /* Pipe.swift in Sources */,
 				AFB8DF032B231B320055A02B /* Network.swift in Sources */,
+				AFA4A4F12B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
 				AFECC4052B1D15A6006034F0 /* Day3.swift in Sources */,
 				AFECC3E02B1B9BB7006034F0 /* String+Extensions.swift in Sources */,
 				AFECC3E92B1BAAFA006034F0 /* RecordTests.swift in Sources */,
@@ -656,9 +674,11 @@
 				AFDF40AD2B21C11B00C89269 /* Card.swift in Sources */,
 				AFA148012B248541006347F3 /* OasisTests.swift in Sources */,
 				AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */,
+				AFA4A4EB2B28539C00CFC8F8 /* Landscape.swift in Sources */,
 				AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */,
 				AFDF40932B20D8E600C89269 /* Day6Tests.swift in Sources */,
 				AFA4A4E72B27B66E00CFC8F8 /* Day10Tests.swift in Sources */,
+				AFA4A4EE2B2853B600CFC8F8 /* Tile.swift in Sources */,
 				AFA147FF2B2484CD006347F3 /* Oasis.swift in Sources */,
 				AFECC4142B1D32AD006034F0 /* Schema.swift in Sources */,
 				AFDF40942B20D8F700C89269 /* Day6.swift in Sources */,
@@ -683,16 +703,20 @@
 				AF095EC62B1F885A00255338 /* MMap.swift in Sources */,
 				AFDF40A62B21BE1100C89269 /* Day8.swift in Sources */,
 				AFECC3F82B1D11C9006034F0 /* main.swift in Sources */,
+				AFA4A4EA2B28539C00CFC8F8 /* Landscape.swift in Sources */,
 				AFECC3E52B1BA5D5006034F0 /* Day2.swift in Sources */,
 				AFA1480A2B26470A006347F3 /* Day10.swift in Sources */,
+				AFA4A4F32B2853E100CFC8F8 /* Direction.swift in Sources */,
 				AFDF40A52B21BDB600C89269 /* Hand.swift in Sources */,
 				AFECC4022B1D1427006034F0 /* PartNumber.swift in Sources */,
+				AFA4A4ED2B2853B600CFC8F8 /* Tile.swift in Sources */,
 				AFECC3EF2B1BAB72006034F0 /* Game.swift in Sources */,
 				AFECC3ED2B1BAB20006034F0 /* Record.swift in Sources */,
 				AFDF40A02B21BD5F00C89269 /* HandStrength.swift in Sources */,
 				AFECC4042B1D14F2006034F0 /* Symbol.swift in Sources */,
 				AFA147F42B24827B006347F3 /* Day9.swift in Sources */,
 				AFECC4112B1D30B5006034F0 /* Schema.swift in Sources */,
+				AFA4A4F02B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
 				AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */,
 				AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
 				AFA148082B264648006347F3 /* Pipe.swift in Sources */,

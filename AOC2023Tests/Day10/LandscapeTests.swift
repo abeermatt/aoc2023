@@ -21,10 +21,10 @@ L|-JF
         let tiles = landscape.walk()
         let pipes = tiles.map(\.pipe)
         
-//        let expected1 = [.start, .northSouth, .northEast, .eastWest, .northWest, .northSouth, .southWest, .eastWest]
-//        let expected2 = pipes.reve
+        let expected1: [Day10.Pipe] = [.start, .northSouth, .northEast, .eastWest, .northWest, .northSouth, .southWest, .eastWest]
+        let expected2 = Array(expected1.reversed())
 
-        XCTAssertEqual([.start, .northSouth, .northEast, .eastWest, .northWest, .northSouth, .southWest, .eastWest], pipes)
+        XCTAssertTrue(pipes == expected1 || pipes == expected2)
     }
 
 
