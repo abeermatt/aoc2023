@@ -31,6 +31,10 @@
 		AF60ED6E2B188F4C001DC88B /* Array+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60ED6D2B188F4C001DC88B /* Array+ExtensionTests.swift */; };
 		AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0928482B188C9900FC0BCF /* Array+Extensions.swift */; };
 		AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6146BD2B1799D2000091C8 /* Day1.swift */; };
+		AF954D312B2B96EA00DFF3D4 /* Day13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */; };
+		AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF954D302B2B96D400DFF3D4 /* Day13.txt */; };
+		AF954D342B2B971000DFF3D4 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D332B2B970A00DFF3D4 /* Day13.swift */; };
+		AF954D352B2B971000DFF3D4 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D332B2B970A00DFF3D4 /* Day13.swift */; };
 		AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */; };
 		AFA147EC2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */; };
 		AFA147EE2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147ED2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift */; };
@@ -184,6 +188,9 @@
 		AF60ED662B188F38001DC88B /* AOC2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF60ED6D2B188F4C001DC88B /* Array+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ExtensionTests.swift"; sourceTree = "<group>"; };
 		AF6146BD2B1799D2000091C8 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13Tests.swift; sourceTree = "<group>"; };
+		AF954D302B2B96D400DFF3D4 /* Day13.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day13.txt; sourceTree = "<group>"; };
+		AF954D332B2B970A00DFF3D4 /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
 		AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCommonMultiplerCalculator.swift; sourceTree = "<group>"; };
 		AFA147ED2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCommonMultiplerCalculatorTests.swift; sourceTree = "<group>"; };
 		AFA147F02B24821E006347F3 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
@@ -311,6 +318,7 @@
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AF954D2E2B2B96CF00DFF3D4 /* Day13 */,
 				AFE7792C2B29A4A20054F226 /* Day12 */,
 				AFE779172B28C91F0054F226 /* Day11 */,
 				AFA148032B26458A006347F3 /* Day10 */,
@@ -329,6 +337,23 @@
 				AFECC40B2B1D180D006034F0 /* Int+ExtensionsTests.swift */,
 			);
 			path = AOC2023Tests;
+			sourceTree = "<group>";
+		};
+		AF954D2D2B2B96C800DFF3D4 /* Day13 */ = {
+			isa = PBXGroup;
+			children = (
+				AF954D332B2B970A00DFF3D4 /* Day13.swift */,
+			);
+			path = Day13;
+			sourceTree = "<group>";
+		};
+		AF954D2E2B2B96CF00DFF3D4 /* Day13 */ = {
+			isa = PBXGroup;
+			children = (
+				AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */,
+				AF954D302B2B96D400DFF3D4 /* Day13.txt */,
+			);
+			path = Day13;
 			sourceTree = "<group>";
 		};
 		AFA147EF2B24820C006347F3 /* Day9 */ = {
@@ -589,6 +614,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AF954D2D2B2B96C800DFF3D4 /* Day13 */,
 				AFE7792A2B29A48B0054F226 /* Day12 */,
 				AFE779162B28C9190054F226 /* Day11 */,
 				AFA148022B264584006347F3 /* Day10 */,
@@ -701,6 +727,7 @@
 				AFA4A4E82B27B69700CFC8F8 /* Day10.txt in Resources */,
 				AF095ED12B1FB67F00255338 /* Day5.txt in Resources */,
 				AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */,
+				AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */,
 				AFDF40992B21072800C89269 /* Day6.txt in Resources */,
 				AFB8DF072B231C340055A02B /* Day7.txt in Resources */,
 				AFE779292B290E6A0054F226 /* Day11.txt in Resources */,
@@ -728,6 +755,7 @@
 				AFA148092B264648006347F3 /* Pipe.swift in Sources */,
 				AFB8DF032B231B320055A02B /* Network.swift in Sources */,
 				AFA4A4F12B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
+				AF954D352B2B971000DFF3D4 /* Day13.swift in Sources */,
 				AFECC4052B1D15A6006034F0 /* Day3.swift in Sources */,
 				AF13A5C92B2A45A900B08552 /* Day12Tests.swift in Sources */,
 				AFECC3E02B1B9BB7006034F0 /* String+Extensions.swift in Sources */,
@@ -779,6 +807,7 @@
 				AF095EBF2B1F864100255338 /* MRangeTests.swift in Sources */,
 				AFE7793B2B29A8BE0054F226 /* Status.swift in Sources */,
 				AFECC3E62B1BA762006034F0 /* Day2.swift in Sources */,
+				AF954D312B2B96EA00DFF3D4 /* Day13Tests.swift in Sources */,
 				AFECC3FC2B1D127A006034F0 /* Day3Tests.swift in Sources */,
 				AFECC40F2B1D196C006034F0 /* Int+Extensions.swift in Sources */,
 				AFDF40972B20D95F00C89269 /* Race.swift in Sources */,
@@ -833,6 +862,7 @@
 				AFA147F42B24827B006347F3 /* Day9.swift in Sources */,
 				AFECC4112B1D30B5006034F0 /* Schema.swift in Sources */,
 				AFA4A4F02B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
+				AF954D342B2B971000DFF3D4 /* Day13.swift in Sources */,
 				AFE7791C2B28CB8D0054F226 /* Universe.swift in Sources */,
 				AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */,
 				AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
