@@ -10,6 +10,10 @@ extension Day12 {
         
         let line: String
         let groups: [Int]
+        
+        func unfolded() -> Self {
+            return self
+        }
      
         func arrangements() -> Int {
 
