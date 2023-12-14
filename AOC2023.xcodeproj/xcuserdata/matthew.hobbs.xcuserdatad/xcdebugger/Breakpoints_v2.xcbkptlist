@@ -18,6 +18,38 @@
             endingLineNumber = "35"
             landmarkName = "testPart2()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F32FDB1-F99D-4D4A-9424-FFF828B316CC - a389994403d2154d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AOC2023Tests.Day4Tests.testPart2() throws -&gt; ()"
+                  moduleName = "AOC2023Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthew.hobbs/Work/Personal/AOC2023/AOC2023Tests/Day4/Day4Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "8F32FDB1-F99D-4D4A-9424-FFF828B316CC - a389994403d2154d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AOC2023Tests.Day4Tests.testPart2() throws -&gt; ()"
+                  moduleName = "AOC2023Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthew.hobbs/Work/Personal/AOC2023/AOC2023Tests/Day4/Day4Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

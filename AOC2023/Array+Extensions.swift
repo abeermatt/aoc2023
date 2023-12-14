@@ -41,7 +41,21 @@ extension Array {
         mutable.insert(contents, at: index.advanced(by: 1))
         return mutable
     }
+    
 
+}
+
+extension Array where Element: CustomStringConvertible {
+    
+    func prettify(joiner: String = "") -> String {
+        guard let first = first else {
+            return ""
+        }
+        return self[1...].reduce(into: "\(first.description)") { acc, next in
+            acc.append(joiner)
+            acc.append(next.description)
+        }
+    }
 }
 
 extension Array where Element: Collection {
