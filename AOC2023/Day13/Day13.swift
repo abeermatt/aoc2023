@@ -1,7 +1,7 @@
 import Foundation
 struct Day13 {
     struct Part1 {
-        static func run(_ input: String) async -> Int {
+        static func run(_ input: String) -> Int {
             return 0
         }
              

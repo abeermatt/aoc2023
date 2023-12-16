@@ -2,23 +2,32 @@ import XCTest
 
 class Day13Tests: XCTestCase {
         
-    func testPart1Sample1() async throws {
+    func testPart1Sample1() throws {
         let input = """
-???.### 1,1,3
-.??..??...?##. 1,1,3
-?#?#?#?#?#?#?#? 1,3,1,6
-????.#...#... 4,1,1
-????.######..#####. 1,6,5
-?###???????? 3,2,1
+.##..##.
+..#.##.#.
+##......#
+##......#
+..#.##.#.
+..##..##.
+#.#.##.#.
+
+#...##..#
+#....#..#
+..##..###
+#####.##.
+#####.##.
+..##..###
+#....#..#
 """
-        let sum = await Day13.Part1.run(input)
-        XCTAssertEqual(21, sum)
+        let sum = Day13.Part1.run(input)
+        XCTAssertEqual(405, sum)
     }
 
     // slooooowww
     func xtestPart1() async throws {
         let input = try TestHelpers.readFile(named: "Day13")
-        let sum = await Day13.Part1.run(input)
+        let sum = Day13.Part1.run(input)
         XCTAssertEqual(7344, sum)
     }
         

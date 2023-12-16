@@ -35,6 +35,9 @@
 		AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF954D302B2B96D400DFF3D4 /* Day13.txt */; };
 		AF954D342B2B971000DFF3D4 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D332B2B970A00DFF3D4 /* Day13.swift */; };
 		AF954D352B2B971000DFF3D4 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D332B2B970A00DFF3D4 /* Day13.swift */; };
+		AF954D372B2B997400DFF3D4 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D362B2B997400DFF3D4 /* Terrain.swift */; };
+		AF954D382B2B997400DFF3D4 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D362B2B997400DFF3D4 /* Terrain.swift */; };
+		AF954D3A2B2B9A5000DFF3D4 /* TerrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D392B2B9A5000DFF3D4 /* TerrainTests.swift */; };
 		AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */; };
 		AFA147EC2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */; };
 		AFA147EE2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA147ED2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift */; };
@@ -191,6 +194,8 @@
 		AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13Tests.swift; sourceTree = "<group>"; };
 		AF954D302B2B96D400DFF3D4 /* Day13.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day13.txt; sourceTree = "<group>"; };
 		AF954D332B2B970A00DFF3D4 /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
+		AF954D362B2B997400DFF3D4 /* Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terrain.swift; sourceTree = "<group>"; };
+		AF954D392B2B9A5000DFF3D4 /* TerrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerrainTests.swift; sourceTree = "<group>"; };
 		AFA147EA2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCommonMultiplerCalculator.swift; sourceTree = "<group>"; };
 		AFA147ED2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCommonMultiplerCalculatorTests.swift; sourceTree = "<group>"; };
 		AFA147F02B24821E006347F3 /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
@@ -343,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				AF954D332B2B970A00DFF3D4 /* Day13.swift */,
+				AF954D362B2B997400DFF3D4 /* Terrain.swift */,
 			);
 			path = Day13;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			children = (
 				AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */,
 				AF954D302B2B96D400DFF3D4 /* Day13.txt */,
+				AF954D392B2B9A5000DFF3D4 /* TerrainTests.swift */,
 			);
 			path = Day13;
 			sourceTree = "<group>";
@@ -796,6 +803,7 @@
 				AFECC3E32B1BA5CC006034F0 /* Day2Tests.swift in Sources */,
 				AFE779202B28CBA50054F226 /* Day11Tests.swift in Sources */,
 				AFDF40A12B21BD6300C89269 /* HandStrength.swift in Sources */,
+				AF954D3A2B2B9A5000DFF3D4 /* TerrainTests.swift in Sources */,
 				AFA147EE2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift in Sources */,
 				AF095EC22B1F86BB00255338 /* MRange.swift in Sources */,
 				AFE779382B29A6850054F226 /* RowTests.swift in Sources */,
@@ -805,6 +813,7 @@
 				AF095EC92B1F887500255338 /* MMapTests.swift in Sources */,
 				AFE779332B29A6050054F226 /* Row.swift in Sources */,
 				AF095EBF2B1F864100255338 /* MRangeTests.swift in Sources */,
+				AF954D382B2B997400DFF3D4 /* Terrain.swift in Sources */,
 				AFE7793B2B29A8BE0054F226 /* Status.swift in Sources */,
 				AFECC3E62B1BA762006034F0 /* Day2.swift in Sources */,
 				AF954D312B2B96EA00DFF3D4 /* Day13Tests.swift in Sources */,
@@ -850,6 +859,7 @@
 				AFA4A4EA2B28539C00CFC8F8 /* Landscape.swift in Sources */,
 				AFECC3E52B1BA5D5006034F0 /* Day2.swift in Sources */,
 				AFA1480A2B26470A006347F3 /* Day10.swift in Sources */,
+				AF954D372B2B997400DFF3D4 /* Terrain.swift in Sources */,
 				AFE7793A2B29A8BE0054F226 /* Status.swift in Sources */,
 				AFA4A4F32B2853E100CFC8F8 /* Direction.swift in Sources */,
 				AFDF40A52B21BDB600C89269 /* Hand.swift in Sources */,
