@@ -1,10 +1,3 @@
-//
-//  Terrain.swift
-//  AOC2023
-//
-//  Created by Matthew Hobbs on 14/12/2023.
-//
-
 import Foundation
 
 extension Day13 {
@@ -12,59 +5,19 @@ extension Day13 {
         case horizontal(Int)
         case vertical(Int)
     }
-    
-    struct VerticalReflection: Hashable {
-        let offset: Int
-        let left: String
-        let right: String
         
-        func matches(inLine line: String) -> Bool {
-            let index = line.index(line.startIndex, offsetBy: offset)
-            let leftCandidate = line[line.startIndex..<index]
-            let rightCandidate = line[index..<line.endIndex]
-            return leftCandidate.hasSuffix(left) && rightCandidate.hasPrefix(right)
-        }
-    }
-    
     struct Terrain {
         
         let lines: [String]
         
         func reflections() -> [Reflection] {
-//            var previous = String(lines.first!)
-            
-//            return lines.reduce(into: Set<Int>()) { acc, line in
-//                acc.formUnion(Self.detectVerticalReflection(inLine: line))
-//            }
-            
-//            let initial
-//            (lines[1...]).reduce(into: Set<Int>()) { acc, next in
-//
-//                if previous == next {
-//                    acc.insert(<#T##newMember: Int##Int#>)
-//                }
-//            }
-//            let columns = lines.reduce(Set<Int>()) { acc, next in
-//                
-//            }
             
             return []
         }
         
-//        static func detectRelections(inLines lines: [String]) -> Set<Int> {
-//            let reflections = Self.detectVerticalReflection(inLine: lines.first!)
-//            
-//            print("found reflections \(reflections)")
-//            let rest = lines.dropFirst()
-//            
-////            return lines.reduce(into: Set<Int>()) { acc, line in
-////                acc.formUnion(Self.detectVerticalReflection(inLine: line))
-////            }
-//        }
-        
-        static func detectVerticalReflection(inInput lines: [String]) -> Set<Int> {
+        static func detectHorizontalReflection(inInput lines: [String]) -> Set<Int> {
             let first = lines.first!
-            var columns = detectVerticalReflection(inLine: first)
+            var columns = detectHorizontalReflection(inLine: first)
             
             for line in lines {
                 var mutable = columns
@@ -84,11 +37,11 @@ extension Day13 {
         }
         
         
-        static func detectVerticalReflection(inLine line: String) -> Set<Int> {
+        static func detectHorizontalReflection(inLine line: String) -> Set<Int> {
             var matches = Set<Int>()
             
             for i in 1..<line.count {
-                if hasReflection(inLine: line, atOffset: i) {
+                if hasHorizontalReflection(inLine: line, atColumn: i) {
                     matches.insert(i)
                 }
             }
@@ -97,7 +50,7 @@ extension Day13 {
             
         }
         
-        static func hasReflection(inLine line: String, atColumn column: Int) -> Bool {
+        static func hasHorizontalReflection(inLine line: String, atColumn column: Int) -> Bool {
             if column == 0 || column >= line.count - 1 {
                 return false
             }
@@ -106,7 +59,6 @@ extension Day13 {
             let distanceFromStart = column
             let distanceFromEnd = (line.count - column)
             let offset = max(distanceFromStart - distanceFromEnd, 0)
-            let size = min(distanceFromStart, distanceFromEnd)
             
 //            print("distanceFromStart \(distanceFromStart) distanceFromEnd: \(distanceFromEnd) line.count \(line.count) offset: \(offset) size \(size)")
 
