@@ -26,6 +26,7 @@ final class TerrainTests: XCTestCase {
         XCTAssertEqual(Set<Int>([1, 5]), Day13.Terrain.detectHorizontalReflection(inLine: "..#.##.#."))
         XCTAssertEqual(Set<Int>([1, 3, 5, 7]), Day13.Terrain.detectHorizontalReflection(inLine: "..##..##."))
         XCTAssertEqual(Set<Int>([5]), Day13.Terrain.detectHorizontalReflection(inLine: "#.#.##.#."))
+        XCTAssertEqual(Set<Int>([]), Day13.Terrain.detectHorizontalReflection(inLine: "#.###.#.#."))
 
     }
     
@@ -39,7 +40,6 @@ final class TerrainTests: XCTestCase {
         XCTAssertFalse(Day13.Terrain.hasHorizontalReflection(inLine: "#.##..##.", atColumn: 6))
         XCTAssertTrue(Day13.Terrain.hasHorizontalReflection(inLine: "#.##..##.", atColumn: 7))
         XCTAssertFalse(Day13.Terrain.hasHorizontalReflection(inLine: "#.##..##.", atColumn: 8))
-
     }
 
     func testDetectVerticalReflection() throws {

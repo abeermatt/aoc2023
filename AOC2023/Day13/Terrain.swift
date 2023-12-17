@@ -23,7 +23,7 @@ extension Day13 {
                 var mutable = columns
                 
                 for column in columns {
-                    if !hasReflection(inLine: line, atOffset: column) {
+                    if !hasHorizontalReflection(inLine: line, atColumn: column) {
                         mutable.remove(column)
                     }
                 }
@@ -80,26 +80,6 @@ extension Day13 {
             return left == right
         }
         
-//        static func rangesForReflection(inLine line: String, atColumn column: Int) -> (Range<String.Index>, Range<String.Index>) {
-//            
-//        }
-
-        
-        static func hasReflection(inLine line: String, atOffset offset: Int) -> Bool {
-            let start = line.startIndex
-            let middle = line.index(line.startIndex, offsetBy: offset)
-            let end = line.index(middle, offsetBy: offset, limitedBy: line.endIndex) ?? line.endIndex
-            
-            let length = min(offset, line.count - offset)
-            let left = String(line[start..<middle]).suffix(length)
-            let right = String(line[middle..<end].reversed()).prefix(length)
-            
-//            print("left: \(left) right: \(right)")
-            
-            
-            return left == right
-        }
-                
         static func parse(_ input: String) -> Self {
             return .init(lines: [])
         }
