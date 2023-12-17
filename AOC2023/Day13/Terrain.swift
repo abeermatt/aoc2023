@@ -17,7 +17,57 @@ extension Day13 {
                 return acc + vertical.sum() + (horizontal.sum() * 100)
             }
         }
+        
+        func smudgedSum() -> Int {
+            return terrains.reduce(0) { acc, next in
+                
+                let lines = next.lines
+                
+                let vertical = next.verticalReflections()
+                let horizontal = next.horizontalReflections()
+                
+                var newVertical = vertical
+                var newHorizontal = horizontal
+                
+                outer: for rowIndex in 0..<lines.count {
+                    let row = lines[rowIndex]
 
+                    for colIndex in 0..<row.count {
+                        
+                        let newLine = Self.toggleCharacter(x: colIndex, in: row)
+                        var mutableLines = lines
+                        mutableLines[rowIndex] = newLine
+                        
+                        let newTerrain = Terrain(lines: mutableLines)
+                        newVertical = newTerrain.verticalReflections()
+                        newHorizontal = newTerrain.horizontalReflections()
+                        newVertical.subtract(vertical)
+                        newHorizontal.subtract(horizontal)
+                        
+                        if !newVertical.isEmpty || !newHorizontal.isEmpty {
+                            break outer
+                        }
+                    }
+                    
+                }
+
+                return acc + newVertical.subtracting(vertical).sum() + (newHorizontal.subtracting(horizontal).sum() * 100)
+            }
+
+        }
+        
+        static func toggleCharacter(x: Int, in string: String) -> String {
+            let index = string.index(string.startIndex, offsetBy: x)
+            let range = index..<string.index(after: index)
+            switch string[index] {
+            case "#": 
+                return string.replacingCharacters(in: range, with: ".")
+            case ".":
+                return string.replacingCharacters(in: range, with: "#")
+            default:
+                return string
+            }
+        }
         
         static func parse(_ input: String) -> Self {
             let groups = input.split(separator: /\n\n/)
@@ -33,8 +83,28 @@ extension Day13 {
         let lines: [String]
         
         func verticalReflections() -> Set<Int> {
-            return Self.detectVerticalReflection(inInput: lines)
+            var columns = Self.detectVerticalReflection(inLine: lines.first!)
+            
+            for line in lines {
+                var mutable = columns
+                
+                for column in columns {
+                    if !Self.hasVerticalReflection(inLine: line, atColumn: column) {
+                        mutable.remove(column)
+                    }
+                }
+                columns.formIntersection(mutable)
+                if columns.isEmpty {
+                    break
+                }
+
+            }
+            return columns
         }
+        
+//        func verticalReflections(inLine line: String) -> Set<Int> {
+//            return Self.detectVerticalReflection(inLine: line)
+//        }
         
         func horizontalReflections() -> Set<Int> {
             return Self.detectHorizontalReflection(inInput: lines)
@@ -84,24 +154,7 @@ extension Day13 {
         }
         
         static func detectVerticalReflection(inInput lines: [String]) -> Set<Int> {
-            let first = lines.first!
-            var columns = detectVerticalReflection(inLine: first)
-            
-            for line in lines {
-                var mutable = columns
-                
-                for column in columns {
-                    if !hasVerticalReflection(inLine: line, atColumn: column) {
-                        mutable.remove(column)
-                    }
-                }
-                columns.formIntersection(mutable)
-                if columns.isEmpty {
-                    break
-                }
-
-            }
-            return columns
+            return Terrain(lines: lines).verticalReflections()
         }
         
         

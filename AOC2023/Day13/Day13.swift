@@ -11,7 +11,8 @@ struct Day13 {
     struct Part2 {
         
         static func run(_ input: String) -> Int {
-            return 0
+            let notes = Notes.parse(input)
+            return notes.smudgedSum()
         }
     }
 }

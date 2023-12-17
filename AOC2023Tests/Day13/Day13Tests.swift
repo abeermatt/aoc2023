@@ -30,16 +30,32 @@ class Day13Tests: XCTestCase {
         XCTAssertEqual(37025, sum)
     }
         
-    
-//    func testPart2Sample() throws {
-//        let input = try TestHelpers.readFile(named: "Day13")
-//        XCTAssertEqual(525152, Day13.Part2.run(input))
-//    }
-//
-//    func testPart2() throws {
-//        let input = try TestHelpers.readFile(named: "Day13")
-//        XCTAssertEqual(550358864332, Day13.Part2.run(input))
-//    }
+    func testPart2Sample() throws {
+        let input = """
+#.##..##.
+..#.##.#.
+##......#
+##......#
+..#.##.#.
+..##..##.
+#.#.##.#.
+
+#...##..#
+#....#..#
+..##..###
+#####.##.
+#####.##.
+..##..###
+#....#..#
+"""
+        let sum = Day13.Part2.run(input)
+        XCTAssertEqual(400, sum)
+    }
+
+    func testPart2() throws {
+        let input = try TestHelpers.readFile(named: "Day13")
+        XCTAssertEqual(32854, Day13.Part2.run(input))
+    }
 
 
 }
