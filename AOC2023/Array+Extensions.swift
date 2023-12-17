@@ -66,7 +66,7 @@ extension Array where Element: Collection {
 
 }
 
-extension Array where ArrayLiteralElement == Int {
+extension Sequence where Element == Int {
     
     func sum() -> Int {
         return self.reduce(0, +)

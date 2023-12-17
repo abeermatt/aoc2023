@@ -5,25 +5,93 @@ extension Day13 {
         case horizontal(Int)
         case vertical(Int)
     }
+    
+    struct Notes {
+        let terrains: [Terrain]
+        
+        func sum() -> Int {
+            return terrains.reduce(0) { acc, next in
+                let vertical = next.verticalReflections()
+                let horizontal = next.horizontalReflections()
+                
+                return acc + vertical.sum() + (horizontal.sum() * 100)
+            }
+        }
+
+        
+        static func parse(_ input: String) -> Self {
+            let groups = input.split(separator: /\n\n/)
+            let terrains = groups.map {
+                Terrain.parse(String($0))
+            }
+            return .init(terrains: terrains)
+        }
+    }
         
     struct Terrain {
         
         let lines: [String]
         
-        func reflections() -> [Reflection] {
-            
-            return []
+        func verticalReflections() -> Set<Int> {
+            return Self.detectVerticalReflection(inInput: lines)
+        }
+        
+        func horizontalReflections() -> Set<Int> {
+            return Self.detectHorizontalReflection(inInput: lines)
         }
         
         static func detectHorizontalReflection(inInput lines: [String]) -> Set<Int> {
+            var reflections = Set<Int>()
+            
+            for row in 0..<lines.count {
+                if hasHorizontalReflection(inLines: lines, atRow: row) {
+                    reflections.insert(row)
+                }
+            }
+            return reflections
+
+        }
+        
+        static func hasHorizontalReflection(inLines lines: [String], atRow row: Int) -> Bool {
+//            print("### row \(row)")
+//            print("lines \(lines)")
+
+            if row == 0 || row > lines.count - 1 {
+                return false
+            }
+            
+            let distanceFromStart = row
+            let distanceFromEnd = (lines.count - row)
+            let offset = max(distanceFromStart - distanceFromEnd, 0)
+            
+//            print("distanceFromStart \(distanceFromStart) distanceFromEnd: \(distanceFromEnd) lines.count \(lines.count) offset: \(offset)")
+
+            let start = lines.index(lines.startIndex, offsetBy: offset)
+            let middle = lines.index(lines.startIndex, offsetBy: row, limitedBy: lines.endIndex) ?? lines.endIndex
+            let end = lines.index(middle, offsetBy: row, limitedBy: lines.endIndex) ?? lines.endIndex
+
+//            print("offset \(offset) start: \(start) middle: \(middle) end: \(end)")
+            
+            let leftRange = start..<middle
+            let rightRange = middle..<end
+
+            let left = lines[leftRange]
+            let right = lines[rightRange].reversed()
+            
+//            print("left: \(left) right: \(right)")
+            
+            return Array(left) == Array(right)
+        }
+        
+        static func detectVerticalReflection(inInput lines: [String]) -> Set<Int> {
             let first = lines.first!
-            var columns = detectHorizontalReflection(inLine: first)
+            var columns = detectVerticalReflection(inLine: first)
             
             for line in lines {
                 var mutable = columns
                 
                 for column in columns {
-                    if !hasHorizontalReflection(inLine: line, atColumn: column) {
+                    if !hasVerticalReflection(inLine: line, atColumn: column) {
                         mutable.remove(column)
                     }
                 }
@@ -37,11 +105,11 @@ extension Day13 {
         }
         
         
-        static func detectHorizontalReflection(inLine line: String) -> Set<Int> {
+        static func detectVerticalReflection(inLine line: String) -> Set<Int> {
             var matches = Set<Int>()
             
             for i in 1..<line.count {
-                if hasHorizontalReflection(inLine: line, atColumn: i) {
+                if hasVerticalReflection(inLine: line, atColumn: i) {
                     matches.insert(i)
                 }
             }
@@ -50,8 +118,8 @@ extension Day13 {
             
         }
         
-        static func hasHorizontalReflection(inLine line: String, atColumn column: Int) -> Bool {
-            if column == 0 || column >= line.count - 1 {
+        static func hasVerticalReflection(inLine line: String, atColumn column: Int) -> Bool {
+            if column == 0 || column > line.count - 1 {
                 return false
             }
 //            print("### column \(column)")
@@ -81,8 +149,16 @@ extension Day13 {
         }
         
         static func parse(_ input: String) -> Self {
-            return .init(lines: [])
+            return .init(lines: input.splitByNewlines())
         }
         
     }
 }
+
+extension StringProtocol {
+    
+    func splitByNewlines() -> [String] {
+        return self.components(separatedBy: .newlines).reject(\.isEmpty)
+    }
+}
+
