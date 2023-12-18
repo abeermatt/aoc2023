@@ -35,4 +35,10 @@ final class Array_ExtensionTests: XCTestCase {
         XCTAssertEqual([2,3,4,5,6], [1, 3, 6, 10, 15, 21].stepDifferences())
     }
 
+    func testRotate() throws {
+        let input = ["O....#....", "O.OO#....#"]
+        let expected = ["OO", "..", ".O", ".O", ".#", "#.", "..", "..", "..", ".#"]
+        
+        XCTAssertEqual(expected, input.rotate())
+    }
 }

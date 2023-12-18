@@ -99,6 +99,19 @@ extension Array where Element == Int {
     }
 }
 
+extension Array where Element == String {
+    func rotate() -> Self {
+        guard let first = first else {
+            return []
+        }
+        let output = Array(repeating: "", count: first.count)
+        return self.reduce(into: output) { acc, next in
+            next.enumerated().forEach { (index, value) in
+                acc[index].append(value)
+            }
+        }
+    }
+}
 
 extension Sequence {
     

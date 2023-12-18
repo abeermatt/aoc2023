@@ -31,6 +31,13 @@
 		AF60ED6E2B188F4C001DC88B /* Array+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60ED6D2B188F4C001DC88B /* Array+ExtensionTests.swift */; };
 		AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0928482B188C9900FC0BCF /* Array+Extensions.swift */; };
 		AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6146BD2B1799D2000091C8 /* Day1.swift */; };
+		AF85D00C2B303EF5000DD35B /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D00B2B303EF5000DD35B /* Platform.swift */; };
+		AF85D00D2B303EF5000DD35B /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D00B2B303EF5000DD35B /* Platform.swift */; };
+		AF85D00F2B303FB3000DD35B /* PlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D00E2B303FB3000DD35B /* PlatformTests.swift */; };
+		AF85D0102B304011000DD35B /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D0072B2FA03E000DD35B /* Day14.swift */; };
+		AF85D0112B304012000DD35B /* Day14.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D0072B2FA03E000DD35B /* Day14.swift */; };
+		AF85D0122B305C8E000DD35B /* Day14Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85D0092B2FA05C000DD35B /* Day14Tests.swift */; };
+		AF85D0132B305C91000DD35B /* Day14.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF85D00A2B2FA05C000DD35B /* Day14.txt */; };
 		AF954D312B2B96EA00DFF3D4 /* Day13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */; };
 		AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF954D302B2B96D400DFF3D4 /* Day13.txt */; };
 		AF954D342B2B971000DFF3D4 /* Day13.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF954D332B2B970A00DFF3D4 /* Day13.swift */; };
@@ -191,6 +198,11 @@
 		AF60ED662B188F38001DC88B /* AOC2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF60ED6D2B188F4C001DC88B /* Array+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ExtensionTests.swift"; sourceTree = "<group>"; };
 		AF6146BD2B1799D2000091C8 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		AF85D0072B2FA03E000DD35B /* Day14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14.swift; sourceTree = "<group>"; };
+		AF85D0092B2FA05C000DD35B /* Day14Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14Tests.swift; sourceTree = "<group>"; };
+		AF85D00A2B2FA05C000DD35B /* Day14.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day14.txt; sourceTree = "<group>"; };
+		AF85D00B2B303EF5000DD35B /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		AF85D00E2B303FB3000DD35B /* PlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		AF954D2F2B2B96D300DFF3D4 /* Day13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13Tests.swift; sourceTree = "<group>"; };
 		AF954D302B2B96D400DFF3D4 /* Day13.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day13.txt; sourceTree = "<group>"; };
 		AF954D332B2B970A00DFF3D4 /* Day13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day13.swift; sourceTree = "<group>"; };
@@ -323,6 +335,7 @@
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AF85D0082B2FA053000DD35B /* Day14Tests */,
 				AF954D2E2B2B96CF00DFF3D4 /* Day13 */,
 				AFE7792C2B29A4A20054F226 /* Day12 */,
 				AFE779172B28C91F0054F226 /* Day11 */,
@@ -342,6 +355,25 @@
 				AFECC40B2B1D180D006034F0 /* Int+ExtensionsTests.swift */,
 			);
 			path = AOC2023Tests;
+			sourceTree = "<group>";
+		};
+		AF85D0062B2FA034000DD35B /* Day14 */ = {
+			isa = PBXGroup;
+			children = (
+				AF85D0072B2FA03E000DD35B /* Day14.swift */,
+				AF85D00B2B303EF5000DD35B /* Platform.swift */,
+			);
+			path = Day14;
+			sourceTree = "<group>";
+		};
+		AF85D0082B2FA053000DD35B /* Day14Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF85D0092B2FA05C000DD35B /* Day14Tests.swift */,
+				AF85D00A2B2FA05C000DD35B /* Day14.txt */,
+				AF85D00E2B303FB3000DD35B /* PlatformTests.swift */,
+			);
+			path = Day14Tests;
 			sourceTree = "<group>";
 		};
 		AF954D2D2B2B96C800DFF3D4 /* Day13 */ = {
@@ -621,6 +653,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AF85D0062B2FA034000DD35B /* Day14 */,
 				AF954D2D2B2B96C800DFF3D4 /* Day13 */,
 				AFE7792A2B29A48B0054F226 /* Day12 */,
 				AFE779162B28C9190054F226 /* Day11 */,
@@ -735,6 +768,7 @@
 				AF095ED12B1FB67F00255338 /* Day5.txt in Resources */,
 				AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */,
 				AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */,
+				AF85D0132B305C91000DD35B /* Day14.txt in Resources */,
 				AFDF40992B21072800C89269 /* Day6.txt in Resources */,
 				AFB8DF072B231C340055A02B /* Day7.txt in Resources */,
 				AFE779292B290E6A0054F226 /* Day11.txt in Resources */,
@@ -788,10 +822,12 @@
 				AFE779222B28CBB20054F226 /* UniverseTests.swift in Sources */,
 				AF095ECF2B1FB5EC00255338 /* Day5Tests.swift in Sources */,
 				AFA1480B2B26470B006347F3 /* Day10.swift in Sources */,
+				AF85D00F2B303FB3000DD35B /* PlatformTests.swift in Sources */,
 				AFB8DF022B231B2C0055A02B /* NodeTests.swift in Sources */,
 				AFECC4252B1E5522006034F0 /* ScratchCard.swift in Sources */,
 				AFDF40AA2B21BE5300C89269 /* HandTests.swift in Sources */,
 				AFECC3F32B1BAC94006034F0 /* GameTests.swift in Sources */,
+				AF85D0122B305C8E000DD35B /* Day14Tests.swift in Sources */,
 				AF2E05F02B27293F00B3D894 /* LandscapeTests.swift in Sources */,
 				AFDF40A72B21BE1100C89269 /* Day8.swift in Sources */,
 				AFECC4062B1D15A9006034F0 /* EngineSchematic.swift in Sources */,
@@ -807,6 +843,7 @@
 				AFA147EE2B23AA97006347F3 /* LeastCommonMultiplerCalculatorTests.swift in Sources */,
 				AF095EC22B1F86BB00255338 /* MRange.swift in Sources */,
 				AFE779382B29A6850054F226 /* RowTests.swift in Sources */,
+				AF85D0112B304012000DD35B /* Day14.swift in Sources */,
 				AFECC4232B1E54F8006034F0 /* ScratchCardTests.swift in Sources */,
 				AFECC3DD2B1B9A2F006034F0 /* String+ExtensionsTests.swift in Sources */,
 				AFECC40C2B1D180D006034F0 /* Int+ExtensionsTests.swift in Sources */,
@@ -825,6 +862,7 @@
 				AFECC4192B1E3E0E006034F0 /* Gear.swift in Sources */,
 				AFA4A4EB2B28539C00CFC8F8 /* Landscape.swift in Sources */,
 				AF60ED742B18913A001DC88B /* Array+Extensions.swift in Sources */,
+				AF85D00D2B303EF5000DD35B /* Platform.swift in Sources */,
 				AFDF40932B20D8E600C89269 /* Day6Tests.swift in Sources */,
 				AFA4A4E72B27B66E00CFC8F8 /* Day10Tests.swift in Sources */,
 				AFA4A4EE2B2853B600CFC8F8 /* Tile.swift in Sources */,
@@ -857,6 +895,7 @@
 				AFDF40A62B21BE1100C89269 /* Day8.swift in Sources */,
 				AFECC3F82B1D11C9006034F0 /* main.swift in Sources */,
 				AFA4A4EA2B28539C00CFC8F8 /* Landscape.swift in Sources */,
+				AF85D0102B304011000DD35B /* Day14.swift in Sources */,
 				AFECC3E52B1BA5D5006034F0 /* Day2.swift in Sources */,
 				AFA1480A2B26470A006347F3 /* Day10.swift in Sources */,
 				AF954D372B2B997400DFF3D4 /* Terrain.swift in Sources */,
@@ -873,6 +912,7 @@
 				AFECC4112B1D30B5006034F0 /* Schema.swift in Sources */,
 				AFA4A4F02B2853CC00CFC8F8 /* Coordinate.swift in Sources */,
 				AF954D342B2B971000DFF3D4 /* Day13.swift in Sources */,
+				AF85D00C2B303EF5000DD35B /* Platform.swift in Sources */,
 				AFE7791C2B28CB8D0054F226 /* Universe.swift in Sources */,
 				AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */,
 				AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
