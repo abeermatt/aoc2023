@@ -27,29 +27,24 @@ O.#..O.#.#
         
     func testPart2Sample() throws {
         let input = """
-#.##..##.
-..#.##.#.
-##......#
-##......#
-..#.##.#.
-..##..##.
-#.#.##.#.
-
-#...##..#
-#....#..#
-..##..###
-#####.##.
-#####.##.
-..##..###
-#....#..#
+O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
 """
-        let sum = Day14.Part2.run(input)
-        XCTAssertEqual(400, sum)
+        let load = Day14.Part2.run(input)
+        XCTAssertEqual(64, load)
     }
 
     func testPart2() throws {
         let input = try TestHelpers.readFile(named: "Day14")
-        XCTAssertEqual(32854, Day14.Part2.run(input))
+        XCTAssertEqual(99194, Day14.Part2.run(input))
     }
 
 

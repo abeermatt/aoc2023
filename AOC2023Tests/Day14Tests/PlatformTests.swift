@@ -12,7 +12,7 @@ O.OO#....#
         let platform = Day14.Platform.parse(input)
         
         XCTAssertEqual(expected, platform.columns)
-        XCTAssertEqual(["O....#....", "O.OO#....#"], platform.levels())
+        XCTAssertEqual(["O....#....", "O.OO#....#"], platform.levels)
     }
 
     func testDescription() throws {
@@ -45,8 +45,8 @@ O.#..O.#.#
 #....###..
 #OO..#....
 """
-        let platform = Day14.Platform.parse(input)
-        let tilted = platform.tiltNorth()
+        var platform = Day14.Platform.parse(input)
+        platform.tiltNorth()
         
         let expected = """
 OOOO.#.O..
@@ -60,9 +60,102 @@ O..#.OO...
 #....###..
 #....#....
 """
-        XCTAssertEqual(expected, tilted.description)
+        XCTAssertEqual(expected, platform.description)
     }
     
+    func testTiltWest() throws {
+        let input = """
+O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
+"""
+        var platform = Day14.Platform.parse(input)
+        platform.tiltWest()
+        
+        let expected = """
+O....#....
+OOO.#....#
+.....##...
+OO.#OO....
+OO......#.
+O.#O...#.#
+O....#OO..
+O.........
+#....###..
+#OO..#....
+"""
+        XCTAssertEqual(expected, platform.description)
+    }
+
+    func testTiltSouth() throws {
+        let input = """
+O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
+"""
+        var platform = Day14.Platform.parse(input)
+        platform.tiltSouth()
+        
+        let expected = """
+.....#....
+....#....#
+...O.##...
+...#......
+O.O....O#O
+O.#..O.#.#
+O....#....
+OO....OO..
+#OO..###..
+#OO.O#...O
+"""
+        XCTAssertEqual(expected, platform.description)
+    }
+
+    func testTiltEast() throws {
+        let input = """
+O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
+"""
+        var platform = Day14.Platform.parse(input)
+        platform.tiltEast()
+        
+        let expected = """
+....O#....
+.OOO#....#
+.....##...
+.OO#....OO
+......OO#.
+.O#...O#.#
+....O#..OO
+.........O
+#....###..
+#..OO#....
+"""
+        XCTAssertEqual(expected, platform.description)
+    }
+
     func testRocksAtLevel() throws {
         let input = """
 OOOO.#.O..
@@ -116,5 +209,86 @@ O..#.OO...
         XCTAssertEqual(0, platform.loadOfRoundRocks(atLevel: 1))
     }
 
+    func testCycle() throws {
+        let input = """
+O....#....
+O.OO#....#
+.....##...
+OO.#O....O
+.O.....O#.
+O.#..O.#.#
+..O..#O..O
+.......O..
+#....###..
+#OO..#....
+"""
+        var platform = Day14.Platform.parse(input)
+        platform.cycle(1)
+
+        let after1Cycle = """
+.....#....
+....#...O#
+...OO##...
+.OO#......
+.....OOO#.
+.O#...O#.#
+....O#....
+......OOOO
+#...O###..
+#..OO#....
+"""
+        XCTAssertEqual(after1Cycle, platform.description)
+        
+        platform = Day14.Platform.parse(input)
+        platform.cycle(2)
+        let after2Cycles = """
+.....#....
+....#...O#
+.....##...
+..O#......
+.....OOO#.
+.O#...O#.#
+....O#...O
+.......OOO
+#..OO###..
+#.OOO#...O
+"""
+        XCTAssertEqual(after2Cycles, platform.description)
+
+        platform = Day14.Platform.parse(input)
+        platform.cycle(3)
+        let after3Cycles = """
+.....#....
+....#...O#
+.....##...
+..O#......
+.....OOO#.
+.O#...O#.#
+....O#...O
+.......OOO
+#...O###.O
+#.OOO#...O
+"""
+        XCTAssertEqual(after3Cycles, platform.description)
+
+    }
+    
+//    func testCompleteCycle() throws {
+//        let input = """
+//O....#....
+//O.OO#....#
+//.....##...
+//OO.#O....O
+//.O.....O#.
+//O.#..O.#.#
+//..O..#O..O
+//.......O..
+//#....###..
+//#OO..#....
+//"""
+//        let platform = Day14.Platform.parse(input)
+//        let cycled = platform.cycle(1)
+//        XCTAssertEqual(platform, cycled)
+//    }
 
 }
