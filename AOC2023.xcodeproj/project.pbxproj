@@ -21,6 +21,15 @@
 		AF095ECE2B1F8F4F00255338 /* Almanac.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095ECA2B1F8D7400255338 /* Almanac.swift */; };
 		AF095ECF2B1FB5EC00255338 /* Day5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF095EBC2B1F842B00255338 /* Day5Tests.swift */; };
 		AF095ED12B1FB67F00255338 /* Day5.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF095ED02B1FB67F00255338 /* Day5.txt */; };
+		AF130D6C2B44B4B3009886B1 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D6B2B44B4B3009886B1 /* Algorithm.swift */; };
+		AF130D6D2B44B4B3009886B1 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D6B2B44B4B3009886B1 /* Algorithm.swift */; };
+		AF130D6F2B44B4C3009886B1 /* AlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D6E2B44B4C3009886B1 /* AlgorithmTests.swift */; };
+		AF130D702B44B5CA009886B1 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D672B44B407009886B1 /* Day15.swift */; };
+		AF130D712B44B5CB009886B1 /* Day15.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D672B44B407009886B1 /* Day15.swift */; };
+		AF130D732B44B7B7009886B1 /* InitializationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D722B44B7B7009886B1 /* InitializationSequence.swift */; };
+		AF130D742B44B7B7009886B1 /* InitializationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D722B44B7B7009886B1 /* InitializationSequence.swift */; };
+		AF130D752B44BA6F009886B1 /* Day15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF130D692B44B421009886B1 /* Day15Tests.swift */; };
+		AF130D762B44BB0C009886B1 /* Day15.txt in Resources */ = {isa = PBXBuildFile; fileRef = AF130D6A2B44B421009886B1 /* Day15.txt */; };
 		AF13A5C92B2A45A900B08552 /* Day12Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE7792D2B29A4A60054F226 /* Day12Tests.swift */; };
 		AF13A5CB2B2A460700B08552 /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A5CA2B2A460700B08552 /* Records.swift */; };
 		AF13A5CC2B2A48EC00B08552 /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A5CA2B2A460700B08552 /* Records.swift */; };
@@ -193,6 +202,12 @@
 		AF095ECA2B1F8D7400255338 /* Almanac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Almanac.swift; sourceTree = "<group>"; };
 		AF095ECC2B1F8D8900255338 /* AlmanacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmanacTests.swift; sourceTree = "<group>"; };
 		AF095ED02B1FB67F00255338 /* Day5.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day5.txt; sourceTree = "<group>"; };
+		AF130D672B44B407009886B1 /* Day15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15.swift; sourceTree = "<group>"; };
+		AF130D692B44B421009886B1 /* Day15Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day15Tests.swift; sourceTree = "<group>"; };
+		AF130D6A2B44B421009886B1 /* Day15.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day15.txt; sourceTree = "<group>"; };
+		AF130D6B2B44B4B3009886B1 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		AF130D6E2B44B4C3009886B1 /* AlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmTests.swift; sourceTree = "<group>"; };
+		AF130D722B44B7B7009886B1 /* InitializationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationSequence.swift; sourceTree = "<group>"; };
 		AF13A5CA2B2A460700B08552 /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
 		AF2E05EF2B27293F00B3D894 /* LandscapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTests.swift; sourceTree = "<group>"; };
 		AF60ED662B188F38001DC88B /* AOC2023Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOC2023Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,9 +347,30 @@
 			path = Day5;
 			sourceTree = "<group>";
 		};
+		AF130D662B44B401009886B1 /* Day15 */ = {
+			isa = PBXGroup;
+			children = (
+				AF130D672B44B407009886B1 /* Day15.swift */,
+				AF130D6B2B44B4B3009886B1 /* Algorithm.swift */,
+				AF130D722B44B7B7009886B1 /* InitializationSequence.swift */,
+			);
+			path = Day15;
+			sourceTree = "<group>";
+		};
+		AF130D682B44B416009886B1 /* Day15 */ = {
+			isa = PBXGroup;
+			children = (
+				AF130D692B44B421009886B1 /* Day15Tests.swift */,
+				AF130D6A2B44B421009886B1 /* Day15.txt */,
+				AF130D6E2B44B4C3009886B1 /* AlgorithmTests.swift */,
+			);
+			path = Day15;
+			sourceTree = "<group>";
+		};
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AF130D682B44B416009886B1 /* Day15 */,
 				AF85D0082B2FA053000DD35B /* Day14Tests */,
 				AF954D2E2B2B96CF00DFF3D4 /* Day13 */,
 				AFE7792C2B29A4A20054F226 /* Day12 */,
@@ -653,6 +689,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AF130D662B44B401009886B1 /* Day15 */,
 				AF85D0062B2FA034000DD35B /* Day14 */,
 				AF954D2D2B2B96C800DFF3D4 /* Day13 */,
 				AFE7792A2B29A48B0054F226 /* Day12 */,
@@ -727,7 +764,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					AF60ED652B188F38001DC88B = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -769,6 +806,7 @@
 				AFECC4272B1E78B9006034F0 /* Day4.txt in Resources */,
 				AF954D322B2B96ED00DFF3D4 /* Day13.txt in Resources */,
 				AF85D0132B305C91000DD35B /* Day14.txt in Resources */,
+				AF130D762B44BB0C009886B1 /* Day15.txt in Resources */,
 				AFDF40992B21072800C89269 /* Day6.txt in Resources */,
 				AFB8DF072B231C340055A02B /* Day7.txt in Resources */,
 				AFE779292B290E6A0054F226 /* Day11.txt in Resources */,
@@ -789,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF13A5CC2B2A48EC00B08552 /* Records.swift in Sources */,
+				AF130D712B44B5CB009886B1 /* Day15.swift in Sources */,
 				AFA4E9922B18AD3900126B28 /* Day1.swift in Sources */,
 				AFA4A4F42B2853E100CFC8F8 /* Direction.swift in Sources */,
 				AF095EC32B1F86C700255338 /* Day5.swift in Sources */,
@@ -828,6 +867,7 @@
 				AFDF40AA2B21BE5300C89269 /* HandTests.swift in Sources */,
 				AFECC3F32B1BAC94006034F0 /* GameTests.swift in Sources */,
 				AF85D0122B305C8E000DD35B /* Day14Tests.swift in Sources */,
+				AF130D6D2B44B4B3009886B1 /* Algorithm.swift in Sources */,
 				AF2E05F02B27293F00B3D894 /* LandscapeTests.swift in Sources */,
 				AFDF40A72B21BE1100C89269 /* Day8.swift in Sources */,
 				AFECC4062B1D15A9006034F0 /* EngineSchematic.swift in Sources */,
@@ -852,8 +892,10 @@
 				AF095EBF2B1F864100255338 /* MRangeTests.swift in Sources */,
 				AF954D382B2B997400DFF3D4 /* Terrain.swift in Sources */,
 				AFE7793B2B29A8BE0054F226 /* Status.swift in Sources */,
+				AF130D6F2B44B4C3009886B1 /* AlgorithmTests.swift in Sources */,
 				AFECC3E62B1BA762006034F0 /* Day2.swift in Sources */,
 				AF954D312B2B96EA00DFF3D4 /* Day13Tests.swift in Sources */,
+				AF130D752B44BA6F009886B1 /* Day15Tests.swift in Sources */,
 				AFECC3FC2B1D127A006034F0 /* Day3Tests.swift in Sources */,
 				AFECC40F2B1D196C006034F0 /* Int+Extensions.swift in Sources */,
 				AFDF40972B20D95F00C89269 /* Race.swift in Sources */,
@@ -867,6 +909,7 @@
 				AFA4A4E72B27B66E00CFC8F8 /* Day10Tests.swift in Sources */,
 				AFA4A4EE2B2853B600CFC8F8 /* Tile.swift in Sources */,
 				AFA147FF2B2484CD006347F3 /* Oasis.swift in Sources */,
+				AF130D742B44B7B7009886B1 /* InitializationSequence.swift in Sources */,
 				AFECC4142B1D32AD006034F0 /* Schema.swift in Sources */,
 				AFDF40942B20D8F700C89269 /* Day6.swift in Sources */,
 				AFECC4242B1E551F006034F0 /* Day4.swift in Sources */,
@@ -916,10 +959,12 @@
 				AFE7791C2B28CB8D0054F226 /* Universe.swift in Sources */,
 				AF6146BE2B1799D2000091C8 /* Day1.swift in Sources */,
 				AFA147EB2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
+				AF130D702B44B5CA009886B1 /* Day15.swift in Sources */,
 				AFA148082B264648006347F3 /* Pipe.swift in Sources */,
 				AFDF40AC2B21BF3E00C89269 /* Card.swift in Sources */,
 				AFECC3FE2B1D1339006034F0 /* Day3.swift in Sources */,
 				AFECC40E2B1D18C1006034F0 /* Int+Extensions.swift in Sources */,
+				AF130D732B44B7B7009886B1 /* InitializationSequence.swift in Sources */,
 				AFA147F92B2483D3006347F3 /* History.swift in Sources */,
 				AF0928492B188C9900FC0BCF /* Array+Extensions.swift in Sources */,
 				AFECC4212B1E549E006034F0 /* ScratchCard.swift in Sources */,
@@ -930,6 +975,7 @@
 				AFDF40912B20D7EA00C89269 /* Day6.swift in Sources */,
 				AFE779322B29A6050054F226 /* Row.swift in Sources */,
 				AFECC4002B1D13D7006034F0 /* EngineSchematic.swift in Sources */,
+				AF130D6C2B44B4B3009886B1 /* Algorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +995,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mashbytes.AOC2023Tests;
@@ -963,6 +1010,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mashbytes.AOC2023Tests;
@@ -1006,6 +1054,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1069,6 +1118,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1094,6 +1144,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1103,6 +1154,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
