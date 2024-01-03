@@ -91,6 +91,10 @@
 		AFB8DF092B231C3C0055A02B /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8DF082B231C3C0055A02B /* Day7.swift */; };
 		AFB8DF0A2B231C470055A02B /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8DF082B231C3C0055A02B /* Day7.swift */; };
 		AFB8DF0C2B231E0B0055A02B /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB8DF0B2B231E0B0055A02B /* NetworkTests.swift */; };
+		AFC831502B455FEC00EE8B69 /* OperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8314F2B455FEC00EE8B69 /* OperationTests.swift */; };
+		AFC831522B45C73D00EE8B69 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC831512B45C73D00EE8B69 /* Operation.swift */; };
+		AFC831532B45C73D00EE8B69 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC831512B45C73D00EE8B69 /* Operation.swift */; };
+		AFC831552B45E46900EE8B69 /* InitializationSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC831542B45E46900EE8B69 /* InitializationSequenceTests.swift */; };
 		AFDF40912B20D7EA00C89269 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40902B20D7EA00C89269 /* Day6.swift */; };
 		AFDF40932B20D8E600C89269 /* Day6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40922B20D8E600C89269 /* Day6Tests.swift */; };
 		AFDF40942B20D8F700C89269 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF40902B20D7EA00C89269 /* Day6.swift */; };
@@ -248,6 +252,9 @@
 		AFB8DF052B231C340055A02B /* Day7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Day7.txt; sourceTree = "<group>"; };
 		AFB8DF082B231C3C0055A02B /* Day7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		AFB8DF0B2B231E0B0055A02B /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		AFC8314F2B455FEC00EE8B69 /* OperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTests.swift; sourceTree = "<group>"; };
+		AFC831512B45C73D00EE8B69 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		AFC831542B45E46900EE8B69 /* InitializationSequenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationSequenceTests.swift; sourceTree = "<group>"; };
 		AFDF40902B20D7EA00C89269 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		AFDF40922B20D8E600C89269 /* Day6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6Tests.swift; sourceTree = "<group>"; };
 		AFDF40952B20D95500C89269 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -353,6 +360,7 @@
 				AF130D672B44B407009886B1 /* Day15.swift */,
 				AF130D6B2B44B4B3009886B1 /* Algorithm.swift */,
 				AF130D722B44B7B7009886B1 /* InitializationSequence.swift */,
+				AFC831512B45C73D00EE8B69 /* Operation.swift */,
 			);
 			path = Day15;
 			sourceTree = "<group>";
@@ -363,6 +371,8 @@
 				AF130D692B44B421009886B1 /* Day15Tests.swift */,
 				AF130D6A2B44B421009886B1 /* Day15.txt */,
 				AF130D6E2B44B4C3009886B1 /* AlgorithmTests.swift */,
+				AFC8314F2B455FEC00EE8B69 /* OperationTests.swift */,
+				AFC831542B45E46900EE8B69 /* InitializationSequenceTests.swift */,
 			);
 			path = Day15;
 			sourceTree = "<group>";
@@ -850,6 +860,7 @@
 				AFECC4082B1D15AE006034F0 /* Symbol.swift in Sources */,
 				AFA147EC2B23AA88006347F3 /* LeastCommonMultiplerCalculator.swift in Sources */,
 				AFA147F62B248280006347F3 /* Day9Tests.swift in Sources */,
+				AFC831552B45E46900EE8B69 /* InitializationSequenceTests.swift in Sources */,
 				AFE7791F2B28CB9F0054F226 /* Day11.swift in Sources */,
 				AFECC40A2B1D15DC006034F0 /* PartNumberTests.swift in Sources */,
 				AFA147FC2B2483E0006347F3 /* HistoryTests.swift in Sources */,
@@ -867,6 +878,7 @@
 				AFDF40AA2B21BE5300C89269 /* HandTests.swift in Sources */,
 				AFECC3F32B1BAC94006034F0 /* GameTests.swift in Sources */,
 				AF85D0122B305C8E000DD35B /* Day14Tests.swift in Sources */,
+				AFC831532B45C73D00EE8B69 /* Operation.swift in Sources */,
 				AF130D6D2B44B4B3009886B1 /* Algorithm.swift in Sources */,
 				AF2E05F02B27293F00B3D894 /* LandscapeTests.swift in Sources */,
 				AFDF40A72B21BE1100C89269 /* Day8.swift in Sources */,
@@ -877,6 +889,7 @@
 				AF095EC72B1F886800255338 /* MMap.swift in Sources */,
 				AFECC3F12B1BABE7006034F0 /* Game.swift in Sources */,
 				AFECC3E32B1BA5CC006034F0 /* Day2Tests.swift in Sources */,
+				AFC831502B455FEC00EE8B69 /* OperationTests.swift in Sources */,
 				AFE779202B28CBA50054F226 /* Day11Tests.swift in Sources */,
 				AFDF40A12B21BD6300C89269 /* HandStrength.swift in Sources */,
 				AF954D3A2B2B9A5000DFF3D4 /* TerrainTests.swift in Sources */,
@@ -929,6 +942,7 @@
 				AFB8DF092B231C3C0055A02B /* Day7.swift in Sources */,
 				AF13A5CB2B2A460700B08552 /* Records.swift in Sources */,
 				AFECC41F2B1E5374006034F0 /* Day4.swift in Sources */,
+				AFC831522B45C73D00EE8B69 /* Operation.swift in Sources */,
 				AFE779302B29A4AA0054F226 /* Day12.swift in Sources */,
 				AF095EC12B1F866B00255338 /* MRange.swift in Sources */,
 				AFA147FE2B2484CD006347F3 /* Oasis.swift in Sources */,

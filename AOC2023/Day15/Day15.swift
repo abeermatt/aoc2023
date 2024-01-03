@@ -2,9 +2,10 @@ import Foundation
 struct Day15 {
     struct Part1 {
         static func run(_ input: String) -> Int {
-            return InitializationSequence
-                .parse(input)
-                .hash()
+            return input
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+                .split(separator: ",")
+                .map(Algorithm.hash(_:))
                 .reduce(0) { acc, next in
                     return acc + Int(next)
                 }
@@ -15,7 +16,8 @@ struct Day15 {
     struct Part2 {
         
         static func run(_ input: String) -> Int {
-            return 0
+            let sequence = InitializationSequence.parse(input)
+            return sequence.totalFocussingPower()
         }
     }
 }
