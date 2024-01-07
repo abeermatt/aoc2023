@@ -5,13 +5,13 @@ struct Day5 {
     struct Part1 {
 
         static func lowestLocation(_ input: String) -> Int {
-            let lines = input .components(separatedBy: .newlines)
-            let seeds = lines[0]
-                .takePrefix("seeds: ")
-                .components(separatedBy: " ")
-                .map { Int($0)! }
-            var almanac = Day5.Almanac.fromArray(Array(lines[2...]))
-            
+//            let lines = input .components(separatedBy: .newlines)
+//            let _seeds = lines[0]
+//                .takePrefix("seeds: ")
+//                .components(separatedBy: " ")
+//                .map { Int($0)! }
+//            var _almanac = Day5.Almanac.fromArray(Array(lines[2...]))
+//            
 //            return seeds.map(almanac.getLocation(forSeed:)).min()!
             
             return 0
