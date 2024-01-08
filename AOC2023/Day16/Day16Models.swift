@@ -18,10 +18,10 @@ extension Day16 {
             self.energised = .init(size: tiles.count)
         }
         
-        mutating func visit() {
-            let initial = Coordinate(x: -1, y: 0)
+        mutating func visit(startingAt initial: Spot = .init(coordinate: .init(x: -1, y: 0), direction: .right)) {
+            energised.reset()
 
-            var toVisit: [Spot] = nextSpots(forSpot: .init(coordinate: initial, direction: .right))
+            var toVisit: [Spot] = nextSpots(forSpot: initial)
             
             while !toVisit.isEmpty {
                 let nextToVisit = toVisit.flatMap(nextSpots(forSpot:))
@@ -139,6 +139,10 @@ extension Day16 {
             if spot.coordinate.x < size && spot.coordinate.y < size {
                 states.insert(spot)
             }
+        }
+        
+        mutating func reset() {
+            states.removeAll()
         }
 
         var count: Int {
