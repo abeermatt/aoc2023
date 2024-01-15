@@ -324,6 +324,10 @@
 		AFECC4262B1E78B9006034F0 /* Day4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day4.txt; sourceTree = "<group>"; };
 		AFEE22732B55D93700AE51FC /* Day16Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day16Models.swift; sourceTree = "<group>"; };
 		AFEE22762B55D94A00AE51FC /* Day16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
+		AFEE227F2B55D9AE00AE51FC /* Day17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17.swift; sourceTree = "<group>"; };
+		AFEE22802B55D9AE00AE51FC /* Day17Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17Models.swift; sourceTree = "<group>"; };
+		AFEE22822B55D9EA00AE51FC /* Day17.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day17.txt; sourceTree = "<group>"; };
+		AFEE22832B55D9EA00AE51FC /* Day17Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day17Tests.swift; sourceTree = "<group>"; };
 		AFFC6DF52B17817300C04F8D /* AOC2023 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AOC2023; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -396,6 +400,7 @@
 		AF60ED672B188F38001DC88B /* AOC2023Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AFEE22812B55D9E000AE51FC /* Day17 */,
 				AFC831582B45F50800EE8B69 /* Day16 */,
 				AF130D682B44B416009886B1 /* Day15 */,
 				AF85D0082B2FA053000DD35B /* Day14 */,
@@ -714,6 +719,24 @@
 			path = Day4;
 			sourceTree = "<group>";
 		};
+		AFEE227E2B55D9A800AE51FC /* Day17 */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE227F2B55D9AE00AE51FC /* Day17.swift */,
+				AFEE22802B55D9AE00AE51FC /* Day17Models.swift */,
+			);
+			path = Day17;
+			sourceTree = "<group>";
+		};
+		AFEE22812B55D9E000AE51FC /* Day17 */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE22832B55D9EA00AE51FC /* Day17Tests.swift */,
+				AFEE22822B55D9EA00AE51FC /* Day17.txt */,
+			);
+			path = Day17;
+			sourceTree = "<group>";
+		};
 		AFFC6DEC2B17817300C04F8D = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +760,7 @@
 		AFFC6DF72B17817300C04F8D /* AOC2023 */ = {
 			isa = PBXGroup;
 			children = (
+				AFEE227E2B55D9A800AE51FC /* Day17 */,
 				AFC831562B45F4E200EE8B69 /* Day16 */,
 				AF130D662B44B401009886B1 /* Day15 */,
 				AF85D0062B2FA034000DD35B /* Day14 */,
